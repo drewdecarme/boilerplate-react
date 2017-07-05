@@ -1,23 +1,16 @@
 const webpack = require('webpack');
 module.exports = {
   module: {
-    loaders: [
-      {
-        test: /\.json$/,
-        loaders: [
-          'json-loader'
-        ]
-      },
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
-        enforce: 'pre'
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: [
+        use: [
           'babel-loader'
         ]
       }

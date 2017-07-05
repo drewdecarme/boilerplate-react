@@ -1,0 +1,52 @@
+*{
+  box-sizing: border-box;
+  position: relative;
+  @include font(1);
+  &::after,
+  &::before{
+    box-sizing: border-box;
+    font-size: inherit;
+  }
+}
+
+html{
+  font-size: 62.5%;
+  line-height: 1.5;
+  @include make-font;
+}
+h1{
+  @include font-xl(5);
+
+  @include breakpoint(sm){
+    @include font(6);
+  }
+}
+h2{
+  @include font(4)
+
+  @include breakpoint(sm){
+    @include font(5);
+  }
+}
+h3{
+  @include font-l(3);
+  text-transform: uppercase;
+
+  @include breakpoint(sm){
+    @include font(4);
+  }
+}
+h4{
+  @include font(2);
+
+  @include breakpoint(sm){
+    @include font(3);
+  }
+}
+h5, p{
+  @include font(1);
+
+  @include breakpoint(sm){
+    @include font(2);
+  }
+}

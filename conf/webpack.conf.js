@@ -8,22 +8,15 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   module: {
-    loaders: [
-      {
-        test: /\.json$/,
-        loaders: [
-          'json-loader'
-        ]
-      },
-      {
-        test: /\.js$/,
-        exclude: /node_modules/,
-        loader: 'eslint-loader',
-        enforce: 'pre'
-      },
+    rules: [
+      // {
+      //   test: /\.js$/,
+      //   exclude: /node_modules/,
+      //   loader: 'eslint-loader',
+      // },
       {
         test: /\.(css|scss)$/,
-        loaders: [
+        use: [
           'style-loader',
           'css-loader',
           'sass-loader',
@@ -33,13 +26,14 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: [
+        use: [
           'react-hot-loader',
           'babel-loader'
         ]
       }
     ]
   },
+  devtool: 'source-map',
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
@@ -49,13 +43,14 @@ module.exports = {
     }),
     new webpack.HotModuleReplacementPlugin(),
     new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: true,
       options: {
-        postcss: () => [autoprefixer]
-      },
-      debug: true
-    })
+        postcss: () => [autoprefixer],
+        context: __dirname
+      }
+    }),
   ],
-  devtool: 'source-map',
   output: {
     path: path.join(process.cwd(), conf.paths.tmp),
     filename: 'index.js'

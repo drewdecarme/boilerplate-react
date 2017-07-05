@@ -1,0 +1,71 @@
+@mixin make-font($font-weight: normal, $font-style: normal, $font-color: $color-default){
+  font-family: $font-family;
+  font-weight: $font-weight;
+  font-style: $font-style;
+  color: $font-color;
+}
+
+@mixin make-font-size($num, $line-height: 1.5){
+  font-size: ms($num);
+  line-height: ms($num) * 1.5;
+}
+
+@mixin font($size: 0, $color: $color-default){
+  @include make-font;
+  @include make-font-size($size);
+}
+
+@mixin font-i($size: 0, $color: $color-default){
+  @include make-font(normal, italic, $color);
+  @include make-font-size($size);
+}
+
+@mixin font-b($size: 0, $color: $color-default){
+  @include make-font(bold, normal, $color);
+  @include make-font-size($size);
+}
+
+@mixin font-bi($size: 0, $color: $color-default){
+  @include make-font(bold, italic, $color);
+  @include make-font-size($size);
+}
+
+@mixin font-l($size: 0, $color: $color-default){
+  @include make-font(300, normal, $color);
+  @include make-font-size($size);
+}
+
+@mixin font-li($size: 0, $color: $color-default){
+  @include make-font(300, italic, $color);
+  @include make-font-size($size);
+}
+
+@mixin font-xl($size: 0, $color: $color-default){
+  @include make-font(200, normal, $color);
+  @include make-font-size($size);
+}
+
+@mixin font-xli($size: 0, $color: $color-default){
+  @include make-font(200, italic, $color);
+  @include make-font-size($size);
+}
+
+@mixin font-sb($size: 0, $color: $color-default){
+  @include make-font(600, normal, $color);
+  @include make-font-size($size);
+}
+
+@mixin font-sbi($size: 0, $color: $color-default){
+  @include make-font(600, italic, $color);
+  @include make-font-size($size);
+}
+
+@mixin font-bla($size: 0, $color: $color-default){
+  @include make-font(900, normal, $color);
+  @include make-font-size($size);
+}
+
+@mixin font-blai($size: 0, $color: $color-default){
+  @include make-font(900, italic, $color);
+  @include make-font-size($size);
+}

@@ -10,30 +10,27 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   module: {
-    loaders: [
-      {
-        test: /\.json$/,
-        loaders: [
-          'json-loader'
-        ]
-      },
+    rules: [
       {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'eslint-loader',
-        enforce: 'pre'
       },
       {
         test: /\.(css|scss)$/,
-        loaders: ExtractTextPlugin.extract({
+        use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader?minimize!sass-loader!postcss-loader'
+          use: [
+            'css-loader?minimize',
+            'sass-loader',
+            'postcss-loader'
+          ]
         })
       },
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        loaders: [
+        use: [
           'babel-loader'
         ]
       }
@@ -50,14 +47,21 @@ module.exports = {
       'process.env.NODE_ENV': '"production"'
     }),
     new webpack.optimize.UglifyJsPlugin({
-      output: {comments: false},
-      compress: {unused: true, dead_code: true, warnings: false} // eslint-disable-line camelcase
+      sourceMap: true,
+      output: {
+        comments: false
+      },
+      compress: {
+        unused: true,
+        dead_code: true,
+      } // eslint-disable-line camelcase
     }),
     new ExtractTextPlugin('index-[contenthash].css'),
     new webpack.optimize.CommonsChunkPlugin({name: 'vendor'}),
     new webpack.LoaderOptionsPlugin({
       options: {
-        postcss: () => [autoprefixer]
+        postcss: () => [autoprefixer],
+        context: __dirname
       }
     })
   ],

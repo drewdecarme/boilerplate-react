@@ -1,0 +1,64 @@
+// Fonts
+$font-family: 'Adobe Garamond Pro';
+
+// Grid
+$grid-columns: 12;
+$grid-gutter-width-base: 30px;
+
+$grid-gutter-widths: (
+  xs: $grid-gutter-width-base,
+  sm: $grid-gutter-width-base,
+  md: $grid-gutter-width-base,
+  lg: $grid-gutter-width-base,
+  xl: $grid-gutter-width-base
+);
+
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px
+) !default;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1140px
+);
+
+// Fonts
+$modularscale: (
+  base: 1rem,
+  ratio: 1.4
+);
+
+// Colors
+$color-default: #000;
+$color-secondary: #E54F20;
+
+// Images
+$image-path: 'images/' !default;
+$fallback-extension: 'png' !default;
+$retina-suffix: '@2x';
+
+// Icons
+$icon-xs: 10px;
+$icon-sm: 20px;
+$icon-md: 30px;
+$icon-lg: 50px;
+$icon-xl: 70px;
+
+$header-svg-width: 300px;
+$header-svg-height-top: 76px;
+$header-svg-height-bottom: 13px;
+$header-svg-breakpoint-scaler-width: .5;
+$header-svg-breakpoint-scaler: 1.75;
+
+// Copy Widths
+$width: $header-svg-width;
+$width-sm: $width + ($width * $header-svg-breakpoint-scaler-width);
+$width-lg: $width + ($width * ($header-svg-breakpoint-scaler-width * 2));
+
+
