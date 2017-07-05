@@ -1,6 +1,8 @@
 import React, {PropTypes, Component} from 'react';
 import TodoTextInput from './TodoTextInput';
 
+import './Header.scss';
+
 class Header extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +17,7 @@ class Header extends Component {
 
   render() {
     return (
-      <header className="header">
+      <header className="header" styleName="test">
         <h1>todos</h1>
         <TodoTextInput
           newTodo

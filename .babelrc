@@ -19,5 +19,18 @@
         ]
       ]
     }
-  }
+  },
+  "plugins": [
+    [
+      "react-css-modules",
+      {
+        "generateScopedName": "[local]___[hash:base64:5]",
+        "filetypes": {
+          ".scss": {
+            "syntax": "postcss-scss"
+          }
+        }
+      }
+    ]
+  ]
 }

@@ -1,9 +1,9 @@
 const webpack = require('webpack');
 const conf = require('./gulp.conf');
 const path = require('path');
+const context = process.cwd();
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const FailPlugin = require('webpack-fail-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
@@ -18,17 +18,35 @@ module.exports = {
         test: /\.(css|scss)$/,
         use: [
           'style-loader',
-          'css-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoader: 1,
+              modules: true,
+              localIdentName: '[local]___[hash:base64:5]'
+            }
+          },
           'sass-loader',
           'postcss-loader'
         ]
       },
       {
-        test: /\.js$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: [
           'react-hot-loader',
-          'babel-loader'
+          'babel-loader?' + JSON.stringify({
+            presets: ['es2015'],
+            plugins: [
+              'transform-react-jsx',
+              [
+                'react-css-modules',
+                {
+                  context
+                }
+              ]
+            ]
+          })
         ]
       }
     ]
@@ -37,7 +55,6 @@ module.exports = {
   plugins: [
     new webpack.optimize.OccurrenceOrderPlugin(),
     new webpack.NoEmitOnErrorsPlugin(),
-    FailPlugin,
     new HtmlWebpackPlugin({
       template: conf.path.src('index.html')
     }),
@@ -47,7 +64,7 @@ module.exports = {
       debug: true,
       options: {
         postcss: () => [autoprefixer],
-        context: __dirname
+        context: context
       }
     }),
   ],
