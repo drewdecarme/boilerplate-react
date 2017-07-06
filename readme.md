@@ -50,5 +50,5 @@
   4. `yarn storybook` Starts the storybook/component library
   5. `yarn test` Runs all of the tests
   6. `yarn test:auto` Runs all of the test automatically
-  7. `yarn lint` Runs the linter
-  8. `yarn lint:fix` Auto fixes linting inconsistencies
+  7. `yarn lint:js` Lints `.js && .jsx`
+  8. `yarn lint:js:fix` Auto fixes `.js && .jsx` errors
