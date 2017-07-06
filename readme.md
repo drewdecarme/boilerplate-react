@@ -52,3 +52,4 @@
   6. `yarn test:auto` Runs all of the test automatically
   7. `yarn lint:js` Lints `.js && .jsx`
   8. `yarn lint:js:fix` Auto fixes `.js && .jsx` errors
+  8. `yarn lint:js:help` Displays help for Eslint CLI
