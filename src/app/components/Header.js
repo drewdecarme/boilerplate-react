@@ -1,5 +1,6 @@
 import React, {PropTypes, Component} from 'react';
 import TodoTextInput from './TodoTextInput';
+import IconReact from '../../assets/icons/icon-react.inline.svg';
 
 import './Header.scss';
 
@@ -18,6 +19,7 @@ class Header extends Component {
   render() {
     return (
       <header className="header" styleName="test">
+        <IconReact />
         <h1>todos</h1>
         <TodoTextInput
           newTodo

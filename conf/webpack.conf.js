@@ -15,6 +15,15 @@ module.exports = {
       //   loader: 'eslint-loader',
       // },
       {
+        test: /\.inline.svg$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'svg-react-loader', // use incase query needs to be added
+          }
+        ]
+      },
+      {
         test: /\.(css|scss)$/,
         use: [
           'style-loader',
