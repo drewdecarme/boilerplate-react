@@ -10,6 +10,8 @@ import {Router, Route, browserHistory} from 'react-router';
 // import 'todomvc-app-css/index.css';
 import './index.scss';
 
+require('./assets/icons/favicon.png');
+
 const store = configureStore();
 
 render(

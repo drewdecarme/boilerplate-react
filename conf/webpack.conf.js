@@ -15,6 +15,17 @@ module.exports = {
       //   loader: 'eslint-loader',
       // },
       {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      },
+      {
         test: /\.inline.svg$/,
         exclude: /node_modules/,
         use: [
