@@ -36,32 +36,34 @@ class TodoItem extends Component {
   render() {
     const { todo } = this.props;
 
-    let element;
+    let element = null;
     if (this.state.editing) {
       element = (
         <TodoTextInput
-          text={todo.text}
-          editing={this.state.editing}
-          onSave={this.handleSave}
+          text={ todo.text }
+          editing={ this.state.editing }
+          onSave={ this.handleSave }
           />
       );
     } else {
       element = (
         <div className="view">
           <input
+            id="toggle-checkbox"
             className="toggle"
             type="checkbox"
-            checked={todo.completed}
-            onChange={this.handleChange}
+            checked={ todo.completed }
+            onChange={ this.handleChange }
             />
           <label
-            onDoubleClick={this.handleDoubleClick}
+            htmlFor="toggle-checkbox"
+            onDoubleClick={ this.handleDoubleClick }
             >
             {todo.text}
           </label>
           <button
             className="destroy"
-            onClick={this.handleClick}
+            onClick={ this.handleClick }
             />
         </div>
       );
@@ -69,10 +71,10 @@ class TodoItem extends Component {
 
     return (
       <li
-        className={classnames({
+        className={ classnames({
           completed: todo.completed,
           editing: this.state.editing
-        })}
+        }) }
         >
         {element}
       </li>

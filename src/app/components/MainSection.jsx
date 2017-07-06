@@ -37,8 +37,8 @@ class MainSection extends Component {
         <input
           className="toggle-all"
           type="checkbox"
-          checked={completedCount === todos.length}
-          onChange={this.handleCompleteAll}
+          checked={ completedCount === todos.length }
+          onChange={ this.handleCompleteAll }
           />
       );
     }
@@ -52,11 +52,11 @@ class MainSection extends Component {
     if (todos.length) {
       return (
         <Footer
-          completedCount={completedCount}
-          activeCount={activeCount}
-          filter={filter}
-          onClearCompleted={this.handleClearCompleted}
-          onShow={this.handleShow}
+          completedCount={ completedCount }
+          activeCount={ activeCount }
+          filter={ filter }
+          onClearCompleted={ this.handleClearCompleted }
+          onShow={ this.handleShow }
           />
       );
     }
@@ -78,9 +78,9 @@ class MainSection extends Component {
         <ul className="todo-list">
           {filteredTodos.map(todo =>
             (<TodoItem
-              key={todo.id}
-              todo={todo}
-              {...actions}
+              key={ todo.id }
+              todo={ todo }
+              { ...actions }
               />)
           )}
         </ul>

@@ -97,5 +97,8 @@ module.exports = {
     'webpack/hot/dev-server',
     'webpack-hot-middleware/client',
     `./${conf.path.src('index')}`
-  ]
+  ],
+  resolve: {
+    extensions: ['.js', '.jsx']
+  }
 };

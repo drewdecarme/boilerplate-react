@@ -33,18 +33,16 @@ class TodoTextInput extends Component {
   render() {
     return (
       <input
-        className={
-          classnames({
-            edit: this.props.editing,
-            'new-todo': this.props.newTodo
-          })}
+        className={ classnames({
+          edit: this.props.editing,
+          'new-todo': this.props.newTodo
+        }) }
         type="text"
-        placeholder={this.props.placeholder}
-        autoFocus="true"
-        value={this.state.text}
-        onBlur={this.handleBlur}
-        onChange={this.handleChange}
-        onKeyDown={this.handleSubmit}
+        placeholder={ this.props.placeholder }
+        value={ this.state.text }
+        onBlur={ this.handleBlur }
+        onChange={ this.handleChange }
+        onKeyDown={ this.handleSubmit }
         />
     );
   }
@@ -56,6 +54,13 @@ TodoTextInput.propTypes = {
   placeholder: PropTypes.string,
   editing: PropTypes.bool,
   newTodo: PropTypes.bool
+};
+
+TodoTextInput.defaultProps = {
+  text: '',
+  placeholder: 'placeholder',
+  editing: true,
+  newTodo: false
 };
 
 export default TodoTextInput;

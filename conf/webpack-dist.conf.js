@@ -18,6 +18,26 @@ module.exports = {
         enforce: 'pre'
       },
       {
+        test: /\.(png|jpg|gif)$/,
+        use: [
+          {
+            loader: 'url-loader',
+            options: {
+              limit: 8192
+            }
+          }
+        ]
+      },
+      {
+        test: /\.inline.svg$/,
+        exclude: /node_modules/,
+        use: [
+          {
+            loader: 'svg-react-loader', // use incase query needs to be added
+          }
+        ]
+      },
+      {
         test: /\.(css|scss)$/,
         use: ExtractTextPlugin.extract({
           fallback: 'style-loader',
@@ -102,5 +122,8 @@ module.exports = {
   entry: {
     app: `./${conf.path.src('index')}`,
     vendor: Object.keys(pkg.dependencies)
+  },
+  resolve: {
+    extensions: ['.js', '.jsx']
   }
 };

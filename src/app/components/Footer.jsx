@@ -15,7 +15,7 @@ class Footer extends Component {
 
     return (
       <span className="todo-count">
-        <strong>{activeCount || 'No'}</strong> {itemWord} left
+        <strong>{ activeCount || 'No' }</strong> { itemWord } left
       </span>
     );
   }
@@ -26,13 +26,13 @@ class Footer extends Component {
     const handleChange = () => onShow(filter);
 
     return (
-      <a
-        className={classnames({ selected: filter === selectedFilter })}
-        style={{ cursor: 'pointer' }}
-        onClick={handleChange}
+      <button
+        className={ classnames({ selected: filter === selectedFilter }) }
+        style={ { cursor: 'pointer' } }
+        onClick={ handleChange }
         >
         {title}
-      </a>
+      </button>
     );
   }
 
@@ -42,7 +42,7 @@ class Footer extends Component {
       return (
         <button
           className="clear-completed"
-          onClick={onClearCompleted}
+          onClick={ onClearCompleted }
           >
           Clear completed
         </button>
@@ -56,7 +56,7 @@ class Footer extends Component {
         {this.renderTodoCount()}
         <ul className="filters">
           {[SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED].map(filter =>
-            (<li key={filter}>
+            (<li key={ filter }>
               {this.renderFilterLink(filter)}
             </li>)
           )}
