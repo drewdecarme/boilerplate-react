@@ -3,7 +3,7 @@ import TestUtils from 'react-addons-test-utils';
 import MainSection from './MainSection';
 import TodoItem from './TodoItem';
 import Footer from './Footer';
-import {SHOW_ALL, SHOW_COMPLETED} from '../constants/TodoFilters';
+import { SHOW_ALL, SHOW_COMPLETED } from '../constants/TodoFilters';
 
 function setup(propOverrides) {
   const props = Object.assign({
@@ -28,7 +28,7 @@ function setup(propOverrides) {
   }, propOverrides);
 
   const renderer = TestUtils.createRenderer();
-  renderer.render(<MainSection {...props}/>);
+  renderer.render(<MainSection {...props} />);
   const output = renderer.getRenderOutput();
 
   return {
@@ -41,14 +41,14 @@ function setup(propOverrides) {
 describe('components', () => {
   describe('MainSection', () => {
     it('should render container', () => {
-      const {output} = setup();
+      const { output } = setup();
       expect(output.type).toBe('section');
       expect(output.props.className).toBe('main');
     });
 
     describe('toggle all input', () => {
       it('should render', () => {
-        const {output} = setup();
+        const { output } = setup();
         const [toggle] = output.props.children;
         expect(toggle.type).toBe('input');
         expect(toggle.props.type).toBe('checkbox');
@@ -56,7 +56,7 @@ describe('components', () => {
       });
 
       it('should be checked if all todos completed', () => {
-        const {output} = setup({
+        const { output } = setup({
           todos: [
             {
               text: 'Use Redux',
@@ -70,7 +70,7 @@ describe('components', () => {
       });
 
       it('should call completeAll on change', () => {
-        const {output, props} = setup();
+        const { output, props } = setup();
         const [toggle] = output.props.children;
         toggle.props.onChange({});
         expect(props.actions.completeAll).toHaveBeenCalled();
@@ -79,7 +79,7 @@ describe('components', () => {
 
     describe('footer', () => {
       it('should render', () => {
-        const {output} = setup();
+        const { output } = setup();
         const [, , footer] = output.props.children;
         expect(footer.type).toBe(Footer);
         expect(footer.props.completedCount).toBe(1);
@@ -88,7 +88,7 @@ describe('components', () => {
       });
 
       it('onShow should set the filter', () => {
-        const {output, renderer} = setup();
+        const { output, renderer } = setup();
         const [, , footer] = output.props.children;
         footer.props.onShow(SHOW_COMPLETED);
         const updated = renderer.getRenderOutput();
@@ -97,7 +97,7 @@ describe('components', () => {
       });
 
       it('onClearCompleted should call clearCompleted', () => {
-        const {output, props} = setup();
+        const { output, props } = setup();
         const [, , footer] = output.props.children;
         footer.props.onClearCompleted();
         expect(props.actions.clearCompleted).toHaveBeenCalled();
@@ -106,7 +106,7 @@ describe('components', () => {
 
     describe('todo list', () => {
       it('should render', () => {
-        const {output, props} = setup();
+        const { output, props } = setup();
         const [, list] = output.props.children;
         expect(list.type).toBe('ul');
         expect(list.props.children.length).toBe(2);
@@ -117,7 +117,7 @@ describe('components', () => {
       });
 
       it('should filter items', () => {
-        const {output, renderer, props} = setup();
+        const { output, renderer, props } = setup();
         const [, , footer] = output.props.children;
         footer.props.onShow(SHOW_COMPLETED);
         const updated = renderer.getRenderOutput();

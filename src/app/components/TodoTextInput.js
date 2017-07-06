@@ -1,12 +1,10 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 
 class TodoTextInput extends Component {
   constructor(props, context) {
     super(props, context);
-    this.state = {
-      text: this.props.text || ''
-    };
+    this.state = { text: this.props.text || '' };
     this.handleBlur = this.handleBlur.bind(this);
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
@@ -17,13 +15,13 @@ class TodoTextInput extends Component {
     if (e.which === 13) {
       this.props.onSave(text);
       if (this.props.newTodo) {
-        this.setState({text: ''});
+        this.setState({ text: '' });
       }
     }
   }
 
   handleChange(e) {
-    this.setState({text: e.target.value});
+    this.setState({ text: e.target.value });
   }
 
   handleBlur(e) {

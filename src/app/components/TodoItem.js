@@ -1,13 +1,11 @@
-import React, {Component, PropTypes} from 'react';
+import React, { Component, PropTypes } from 'react';
 import classnames from 'classnames';
 import TodoTextInput from './TodoTextInput';
 
 class TodoItem extends Component {
   constructor(props, context) {
     super(props, context);
-    this.state = {
-      editing: false
-    };
+    this.state = { editing: false };
     this.handleChange = this.handleChange.bind(this);
     this.handleClick = this.handleClick.bind(this);
     this.handleDoubleClick = this.handleDoubleClick.bind(this);
@@ -23,7 +21,7 @@ class TodoItem extends Component {
   }
 
   handleDoubleClick() {
-    this.setState({editing: true});
+    this.setState({ editing: true });
   }
 
   handleSave(text) {
@@ -32,11 +30,11 @@ class TodoItem extends Component {
     } else {
       this.props.editTodo(this.props.todo.id, text);
     }
-    this.setState({editing: false});
+    this.setState({ editing: false });
   }
 
   render() {
-    const {todo} = this.props;
+    const { todo } = this.props;
 
     let element;
     if (this.state.editing) {

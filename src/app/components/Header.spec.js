@@ -4,12 +4,10 @@ import Header from './Header';
 import TodoTextInput from './TodoTextInput';
 
 function setup() {
-  const props = {
-    addTodo: jasmine.createSpy()
-  };
+  const props = { addTodo: jasmine.createSpy() };
 
   const renderer = TestUtils.createRenderer();
-  renderer.render(<Header {...props}/>);
+  renderer.render(<Header {...props} />);
   const output = renderer.getRenderOutput();
 
   return {
@@ -22,7 +20,7 @@ function setup() {
 describe('components', () => {
   describe('Header', () => {
     it('should render correctly', () => {
-      const {output} = setup();
+      const { output } = setup();
 
       expect(output.type).toBe('header');
       expect(output.props.className).toBe('header');
@@ -38,7 +36,7 @@ describe('components', () => {
     });
 
     it('should call addTodo if length of text is greater than 0', () => {
-      const {output, props} = setup();
+      const { output, props } = setup();
       const input = output.props.children[1];
       input.props.onSave('');
       expect(props.addTodo.calls.count()).toBe(0);

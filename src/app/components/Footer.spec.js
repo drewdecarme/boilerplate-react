@@ -1,7 +1,7 @@
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
 import Footer from './Footer';
-import {SHOW_ALL, SHOW_ACTIVE} from '../constants/TodoFilters';
+import { SHOW_ALL, SHOW_ACTIVE } from '../constants/TodoFilters';
 
 function setup(propOverrides) {
   const props = Object.assign({
@@ -13,7 +13,7 @@ function setup(propOverrides) {
   }, propOverrides);
 
   const renderer = TestUtils.createRenderer();
-  renderer.render(<Footer {...props}/>);
+  renderer.render(<Footer {...props} />);
   const output = renderer.getRenderOutput();
 
   return {
@@ -26,34 +26,33 @@ function getTextContent(elem) {
   const children = Array.isArray(elem.props.children) ?
     elem.props.children : [elem.props.children];
 
-  return children.reduce((out, child) => {
+  return children.reduce((out, child) =>
     // Children are either elements or text strings
-    return out + (child.props ? getTextContent(child) : child);
-  }, '');
+     out + (child.props ? getTextContent(child) : child), '');
 }
 
 describe('components', () => {
   describe('Footer', () => {
     it('should render container', () => {
-      const {output} = setup();
+      const { output } = setup();
       expect(output.type).toBe('footer');
       expect(output.props.className).toBe('footer');
     });
 
     it('should display active count when 0', () => {
-      const {output} = setup({activeCount: 0});
+      const { output } = setup({ activeCount: 0 });
       const [count] = output.props.children;
       expect(getTextContent(count)).toBe('No items left');
     });
 
     it('should display active count when above 0', () => {
-      const {output} = setup({activeCount: 1});
+      const { output } = setup({ activeCount: 1 });
       const [count] = output.props.children;
       expect(getTextContent(count)).toBe('1 item left');
     });
 
     it('should render filters', () => {
-      const {output} = setup();
+      const { output } = setup();
       const [, filters] = output.props.children;
       expect(filters.type).toBe('ul');
       expect(filters.props.className).toBe('filters');
@@ -71,7 +70,7 @@ describe('components', () => {
     });
 
     it('should call onShow when a filter is clicked', () => {
-      const {output, props} = setup();
+      const { output, props } = setup();
       const [, filters] = output.props.children;
       const filterLink = filters.props.children[1].props.children;
       filterLink.props.onClick({});
@@ -79,20 +78,20 @@ describe('components', () => {
     });
 
     it('shouldnt show clear button when no completed todos', () => {
-      const {output} = setup({completedCount: 0});
+      const { output } = setup({ completedCount: 0 });
       const [, , clear] = output.props.children;
       expect(clear).toBe(undefined);
     });
 
     it('should render clear button when completed todos', () => {
-      const {output} = setup({completedCount: 1});
+      const { output } = setup({ completedCount: 1 });
       const [, , clear] = output.props.children;
       expect(clear.type).toBe('button');
       expect(clear.props.children).toBe('Clear completed');
     });
 
     it('should call onClearCompleted on clear button click', () => {
-      const {output, props} = setup({completedCount: 1});
+      const { output, props } = setup({ completedCount: 1 });
       const [, , clear] = output.props.children;
       clear.props.onClick({});
       expect(props.onClearCompleted).toHaveBeenCalled();

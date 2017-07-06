@@ -32,14 +32,10 @@ describe('todo actions', () => {
   });
 
   it('completeAll should create COMPLETE_ALL action', () => {
-    expect(actions.completeAll()).toEqual({
-      type: types.COMPLETE_ALL
-    });
+    expect(actions.completeAll()).toEqual({ type: types.COMPLETE_ALL });
   });
 
   it('clearCompleted should create CLEAR_COMPLETED action', () => {
-    expect(actions.clearCompleted()).toEqual({
-      type: types.CLEAR_COMPLETED
-    });
+    expect(actions.clearCompleted()).toEqual({ type: types.CLEAR_COMPLETED });
   });
 });

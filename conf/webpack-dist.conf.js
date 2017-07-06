@@ -11,30 +11,11 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'eslint-loader',
-      // },
       {
-        test: /\.(png|jpg|gif)$/,
-        use: [
-          {
-            loader: 'url-loader',
-            options: {
-              limit: 8192
-            }
-          }
-        ]
-      },
-      {
-        test: /\.inline.svg$/,
+        test: /\.(js|jsx)$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'svg-react-loader', // use incase query needs to be added
-          }
-        ]
+        loader: 'eslint-loader',
+        enforce: 'pre'
       },
       {
         test: /\.(css|scss)$/,

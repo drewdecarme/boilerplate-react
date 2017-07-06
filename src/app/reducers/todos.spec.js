@@ -179,9 +179,7 @@ describe('todos reducer', () => {
           completed: false,
           id: 0
         }
-      ], {
-        type: types.COMPLETE_ALL
-      })
+      ], { type: types.COMPLETE_ALL })
     ).toEqual([
       {
         text: 'Run the tests',
@@ -206,9 +204,7 @@ describe('todos reducer', () => {
           completed: true,
           id: 0
         }
-      ], {
-        type: types.COMPLETE_ALL
-      })
+      ], { type: types.COMPLETE_ALL })
     ).toEqual([
       {
         text: 'Run the tests',
@@ -234,9 +230,7 @@ describe('todos reducer', () => {
           completed: false,
           id: 0
         }
-      ], {
-        type: types.CLEAR_COMPLETED
-      })
+      ], { type: types.CLEAR_COMPLETED })
     ).toEqual([
       {
         text: 'Use Redux',
@@ -252,9 +246,7 @@ describe('todos reducer', () => {
         {
           type: types.COMPLETE_TODO,
           id: 0
-        }, {
-          type: types.CLEAR_COMPLETED
-        }, {
+        }, { type: types.CLEAR_COMPLETED }, {
           type: types.ADD_TODO,
           text: 'Write more tests'
         }

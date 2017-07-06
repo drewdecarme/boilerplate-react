@@ -1,4 +1,4 @@
-import {createStore} from 'redux';
+import { createStore } from 'redux';
 import rootReducer from '../reducers/index';
 
 export default function configureStore(initialState) {
@@ -10,5 +10,6 @@ export default function configureStore(initialState) {
       store.replaceReducer(nextReducer);
     });
   }
+
   return store;
 }

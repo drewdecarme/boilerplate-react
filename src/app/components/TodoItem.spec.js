@@ -18,7 +18,7 @@ function setup(editing = false) {
   const renderer = TestUtils.createRenderer();
 
   renderer.render(
-    <TodoItem {...props}/>
+    <TodoItem {...props} />
   );
 
   let output = renderer.getRenderOutput();
@@ -39,7 +39,7 @@ function setup(editing = false) {
 describe('components', () => {
   describe('TodoItem', () => {
     it('initial render', () => {
-      const {output} = setup();
+      const { output } = setup();
 
       expect(output.type).toBe('li');
       expect(output.props.className).toBe('');
@@ -62,21 +62,21 @@ describe('components', () => {
     });
 
     it('input onChange should call completeTodo', () => {
-      const {output, props} = setup();
+      const { output, props } = setup();
       const input = output.props.children.props.children[0];
       input.props.onChange({});
       expect(props.completeTodo).toHaveBeenCalledWith(0);
     });
 
     it('button onClick should call deleteTodo', () => {
-      const {output, props} = setup();
+      const { output, props } = setup();
       const button = output.props.children.props.children[2];
       button.props.onClick({});
       expect(props.deleteTodo).toHaveBeenCalledWith(0);
     });
 
     it('label onDoubleClick should put component in edit state', () => {
-      const {output, renderer} = setup();
+      const { output, renderer } = setup();
       const label = output.props.children.props.children[1];
       label.props.onDoubleClick({});
       const updated = renderer.getRenderOutput();
@@ -85,7 +85,7 @@ describe('components', () => {
     });
 
     it('edit state render', () => {
-      const {output} = setup(true);
+      const { output } = setup(true);
 
       expect(output.type).toBe('li');
       expect(output.props.className).toBe('editing');
@@ -97,19 +97,19 @@ describe('components', () => {
     });
 
     it('TodoTextInput onSave should call editTodo', () => {
-      const {output, props} = setup(true);
+      const { output, props } = setup(true);
       output.props.children.props.onSave('Use Redux');
       expect(props.editTodo).toHaveBeenCalledWith(0, 'Use Redux');
     });
 
     it('TodoTextInput onSave should call deleteTodo if text is empty', () => {
-      const {output, props} = setup(true);
+      const { output, props } = setup(true);
       output.props.children.props.onSave('');
       expect(props.deleteTodo).toHaveBeenCalledWith(0);
     });
 
     it('TodoTextInput onSave should exit component from edit state', () => {
-      const {output, renderer} = setup(true);
+      const { output, renderer } = setup(true);
       output.props.children.props.onSave('Use Redux');
       const updated = renderer.getRenderOutput();
       expect(updated.type).toBe('li');

@@ -9,11 +9,12 @@ const autoprefixer = require('autoprefixer');
 module.exports = {
   module: {
     rules: [
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   loader: 'eslint-loader',
-      // },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+        enforce: 'pre'
+      },
       {
         test: /\.(png|jpg|gif)$/,
         use: [

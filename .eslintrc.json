@@ -1,0 +1,104 @@
+{
+  "extends": [
+    "airbnb",
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "xo-react/space",
+    "xo-space/esnext"
+  ],
+  "parser": "babel-eslint",
+  "root": true,
+  "plugins": [
+    "react",
+    "jsx-a11y",
+    "import"
+  ],
+  "env": {
+    "browser": true,
+    "jasmine": true
+  },
+  "ecmaFeatures": {
+    "forOf": true,
+    "jsx": true
+  },
+  "rules": {
+    "curly": 2,
+    "dot-location": 2,
+    "dot-notation": 2,
+    "eqeqeq": 2,
+    "no-else-return": 2,
+    "no-empty-function": 2,
+    "no-eq-null": 2,
+    "no-floating-decimal": 2,
+    "no-loop-func": 2,
+    "no-magic-numbers": 2,
+    "no-multi-spaces": 2,
+    "no-unused-expressions": 2,
+    "no-useless-call": 2,
+    "no-useless-return": 2,
+    "yoda": 2,
+    "init-declarations": [2, "always"],
+    "no-undef-init": 2,
+    "no-use-before-define": [2, {
+        "functions": false,
+        "classes": false
+    }],
+    "array-bracket-spacing": [2, "never"],
+    "block-spacing": 2,
+    "brace-style": 2,
+    "camelcase": 2,
+    "comma-dangle": [2, "never"],
+    "comma-spacing": [2, {
+      "before": false,
+      "after": true
+    }],
+    "comma-style": [2, "last"],
+    "computed-property-spacing": [2, "never"],
+    "eol-last": [2, "always"],
+    "func-call-spacing": [2, "never"],
+    "func-style": [2, "expression"],
+    "indent": [2, 2],
+    "jsx-quotes": [2, "prefer-double"],
+    "key-spacing": [2, {
+      "beforeColon": false,
+      "afterColon": true,
+      "mode": "strict"
+    }],
+    "keyword-spacing": [2, {
+      "before": true
+    }],
+    "lines-around-directive": [2, {
+      "before": "never",
+      "after": "always"
+    }],
+    "new-cap": [2, {
+      "newIsCap": true,
+      "capIsNew": true
+    }],
+    "react/jsx-space-before-closing": 0,
+    "new-parens": 2,
+    "newline-before-return": 2,
+    "no-nested-ternary": 2,
+    "no-tabs": 2,
+    "no-trailing-spaces": 2,
+    "no-unneeded-ternary": 2,
+    "no-whitespace-before-property": 2,
+    "object-curly-newline": [2, {
+      "multiline": true
+    }],
+    "object-curly-spacing": [2, "always", {
+      "objectsInObjects": false
+    }],
+    "quotes": [2, "single"],
+    "space-before-function-paren": 2,
+    "arrow-body-style": [2, "as-needed", {
+      "requireReturnForObjectLiteral": true
+    }],
+    "arrow-spacing": [2, {
+      "before": true,
+      "after": true
+    }],
+    "no-var": 2,
+    "prefer-const": 2
+  }
+}
