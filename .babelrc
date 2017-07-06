@@ -3,24 +3,8 @@
     "react",
     "es2015"
   ],
-  "env": {
-    "test": {
-      "plugins": [
-        "istanbul"
-      ]
-    },
-    "production": {
-      "presets": [
-        [
-          "es2015",
-          {
-            "modules": false
-          }
-        ]
-      ]
-    }
-  },
   "plugins": [
+    "add-module-exports",
     [
       "react-css-modules",
       {
@@ -32,5 +16,17 @@
         }
       }
     ]
-  ]
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "istanbul"
+      ]
+    },
+    "production": {
+      "presets": [
+        ["latest"]
+      ]
+    }
+  }
 }

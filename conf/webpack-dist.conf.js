@@ -4,7 +4,6 @@ const path = require('path');
 const context = process.cwd();
 
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const UglifyJSPlugin = require('uglifyjs-webpack-plugin');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const pkg = require('../package.json');
 const autoprefixer = require('autoprefixer');
@@ -37,12 +36,18 @@ module.exports = {
       },
       {
         test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
+        exclude: function(modulePath) {
+          return /node_modules/.test(modulePath) &&
+              !/node_modules\/postcss-modules-values/.test(modulePath) &&
+              !/node_modules\/postcss-modules-scope/.test(modulePath) &&
+              !/node_modules\/postcss-modules-local-by-default/.test(modulePath) &&
+              !/node_modules\/postcss-modules-extract-imports/.test(modulePath) &&
+              !/node_modules\/postcss-scss/.test(modulePath) &&
+              !/node_modules\/babel-plugin-react-css-modules/.test(modulePath);
+        },
         use: [
           'babel-loader?' + JSON.stringify({
-            presets: ['es2015'],
             plugins: [
-              'babel-plugin-react-css-modules',
               'transform-react-jsx',
               [
                 'react-css-modules',
@@ -93,6 +98,6 @@ module.exports = {
   },
   entry: {
     app: `./${conf.path.src('index')}`,
-    vendor: Object.keys(pkg.dependencies).filter(dep => ['babel-plugin-react-css-modules'].indexOf(dep) === -1)
+    vendor: Object.keys(pkg.dependencies)
   }
 };
