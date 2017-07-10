@@ -12,6 +12,13 @@
 - [ES6](http://es6-features.org) (with [Babel](https://babeljs.io))
 - [Redux](http://redux.js.org/)
 
+#### Internationalization
+- [React Intl](https://github.com/yahoo/react-intl)
+- [Babel Plugin React Intl](https://github.com/yahoo/babel-plugin-react-intl)
+
+#### Evaluating
+- [JS Cookie](https://github.com/js-cookie/js-cookie)
+
 #### TODO
 - [AirBnB React Syntax Style Guide](https://github.com/airbnb/javascript/tree/master/react)
 - [React Storybook](https://github.com/storybooks/storybook)
@@ -43,7 +50,7 @@
   4. Start the solution `yarn start`
   5. A browser window will open with the solution (if it doesn't open, navigate to [http://localhost:3000/](http://localhost:3000))
 
-### Build Scripts
+#### Build Scripts
   1. `yarn start` Starts **development** instance
   2. `yarn preview` Previews the **production** instance
   3. `yarn build` Builds the **production** instance
@@ -53,3 +60,10 @@
   7. `yarn lint:js` Lints `.js && .jsx`
   8. `yarn lint:js:fix` Auto fixes `.js && .jsx` errors
   8. `yarn lint:js:help` Displays help for Eslint CLI
+
+## Conventions
+
+#### Internationalization [Guide](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
+  - Use `<FormattedMessage></FormattedMessage>` when you need the text to have a span in it
+  - Use React-Intl API for just plain text
+  - `FormattedMessage` id prop should follow the convention `componentName.idLocaltoComponent`;

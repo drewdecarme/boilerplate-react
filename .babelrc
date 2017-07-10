@@ -5,17 +5,17 @@
   ],
   "plugins": [
     "add-module-exports",
-    [
-      "react-css-modules",
-      {
-        "generateScopedName": "[local]___[hash:base64:5]",
-        "filetypes": {
-          ".scss": {
-            "syntax": "postcss-scss"
-          }
+    ["react-css-modules", {
+      "generateScopedName": "[local]___[hash:base64:5]",
+      "filetypes": {
+        ".scss": {
+          "syntax": "postcss-scss"
         }
       }
-    ]
+    }],
+    ["react-intl", {
+      "messagesDir": "./src/app/messages/"
+    }]
   ],
   "env": {
     "test": {
