@@ -31,35 +31,14 @@ $container-max-widths: (
 
 // Fonts
 $modularscale: (
-  base: 1rem,
-  ratio: 1.4
+  base: 1.6rem,
+  ratio: 1.2,
+  768px: (
+    base: 1.8rem,
+    ratio: 1.2,
+  )
 );
 
 // Colors
 $color-default: #000;
 $color-secondary: #E54F20;
-
-// Images
-$image-path: 'images/' !default;
-$fallback-extension: 'png' !default;
-$retina-suffix: '@2x';
-
-// Icons
-$icon-xs: 10px;
-$icon-sm: 20px;
-$icon-md: 30px;
-$icon-lg: 50px;
-$icon-xl: 70px;
-
-$header-svg-width: 300px;
-$header-svg-height-top: 76px;
-$header-svg-height-bottom: 13px;
-$header-svg-breakpoint-scaler-width: .5;
-$header-svg-breakpoint-scaler: 1.75;
-
-// Copy Widths
-$width: $header-svg-width;
-$width-sm: $width + ($width * $header-svg-breakpoint-scaler-width);
-$width-lg: $width + ($width * ($header-svg-breakpoint-scaler-width * 2));
-
-

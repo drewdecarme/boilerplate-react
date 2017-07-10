@@ -9,44 +9,13 @@
   }
 }
 
-html{
-  font-size: 62.5%;
-  line-height: 1.5;
-  @include make-font;
+html, body{
+  @include make-font(0);
 }
-h1{
-  @include font-xl(5);
-
-  @include breakpoint(sm){
-    @include font(6);
-  }
-}
-h2{
-  @include font(4)
-
-  @include breakpoint(sm){
-    @include font(5);
-  }
-}
-h3{
-  @include font-l(3);
-  text-transform: uppercase;
-
-  @include breakpoint(sm){
-    @include font(4);
-  }
-}
-h4{
-  @include font(2);
-
-  @include breakpoint(sm){
-    @include font(3);
-  }
-}
-h5, p{
-  @include font(1);
-
-  @include breakpoint(sm){
-    @include font(2);
-  }
-}
+p { @include font(0) };
+h5 { @include font(1) };
+h4 { @include font(2) };
+h3 { @include font(3) };
+h3 { @include font(4) };
+h2 { @include font(5) };
+h1 { @include font(6) };
