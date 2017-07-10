@@ -10,7 +10,6 @@ import Cookie from 'js-cookie';
 import App from './app/containers/App';
 import configureStore from './app/store/configureStore';
 
-// import 'todomvc-app-css/index.css';
 import './index.scss';
 
 require('./assets/icons/favicon.png');

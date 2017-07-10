@@ -64,12 +64,23 @@
 
 ## Conventions
 
+#### Creating a Component
+  - Document creating a component
+
+#### Sass Style Guide
+  - Look into creating style guide
+
+#### Component Library
+  - Implement storybook
+  - Document storybook
+
 #### ES6 [Guide]()
   - Custom ES6 Guide Forked
 
 #### Responsive Grid System [Guide]()
   - Bootstrap 4 Documentation
   - How to use Grid Component Architecture
+  - Add and Create Grid Component
 
 #### Responsive Text System [Guide](https://github.com/modularscale/modularscale-sass)
   - Uses sass modular scale
@@ -98,4 +109,7 @@
   - Document Component
 
 #### React Middlewear
+ - 
+
+#### Cookies
  - 
