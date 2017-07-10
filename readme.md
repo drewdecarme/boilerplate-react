@@ -68,3 +68,9 @@
   - Use `<FormattedMessage></FormattedMessage>` when you need the text to have a span in it
   - Use React-Intl API for just plain text
   - `FormattedMessage` id prop should follow the convention `componentName.idLocaltoComponent`;
+
+#### Responsive Text System
+  - Uses the modular scale
+  - Mobile first 16px base
+  - Desktop 18px base
+  - Uses perfect-fourth modular scaling system

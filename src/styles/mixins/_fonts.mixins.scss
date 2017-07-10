@@ -5,7 +5,7 @@
   color: $font-color;
 }
 
-@mixin make-font-size($num, $line-height: 1.5){
+@mixin make-font-size($num, $line-height: $font-line-height){
   font-size: ms($num);
   line-height: ms($num) * 1.5;
 }

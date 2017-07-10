@@ -1,7 +1,6 @@
 *{
   box-sizing: border-box;
   position: relative;
-  @include font(0);
   &::after,
   &::before{
     box-sizing: border-box;
@@ -10,9 +9,9 @@
 }
 
 html, body{
-  @include make-font(0);
+  @include make-font;
 }
-p { @include font(0) };
+p, button, a, input { @include font(0) };
 h5 { @include font(1) };
 h4 { @include font(2) };
 h3 { @include font(3) };

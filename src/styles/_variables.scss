@@ -1,6 +1,6 @@
 // Fonts
-$font-family: 'Vollkorn', sans-serif;
-$font-family-alt: 'Open Sans', serif;
+$font-family: 'Vollkorn';
+$font-family-alt: 'Open Sans';
 
 // Grid
 $grid-columns: 12;
@@ -30,6 +30,7 @@ $container-max-widths: (
 );
 
 // Fonts
+$font-line-height: 1.4;
 $modularscale: (
   base: 16px,
   ratio: 1.333,
