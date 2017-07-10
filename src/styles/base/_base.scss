@@ -1,7 +1,7 @@
 *{
   box-sizing: border-box;
   position: relative;
-  @include font(1);
+  @include font(0);
   &::after,
   &::before{
     box-sizing: border-box;

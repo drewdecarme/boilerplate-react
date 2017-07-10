@@ -31,11 +31,11 @@ $container-max-widths: (
 
 // Fonts
 $modularscale: (
-  base: 1.6rem,
-  ratio: 1.2,
+  base: 16px,
+  ratio: 1.333,
   768px: (
-    base: 1.8rem,
-    ratio: 1.2,
+    base: 18px,
+    ratio: 1.333,
   )
 );
 
