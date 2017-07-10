@@ -1,7 +1,7 @@
 import React from 'react';
 import TestUtils from 'react-addons-test-utils';
-import Header from './Header';
-import TodoTextInput from './TodoTextInput';
+import Header from './index.jsx';
+import TodoTextInput from '../TodoTextInput/';
 
 function setup() {
   const props = { addTodo: jasmine.createSpy() };

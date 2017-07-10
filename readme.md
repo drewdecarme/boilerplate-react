@@ -18,6 +18,7 @@
 
 #### Evaluating
 - [JS Cookie](https://github.com/js-cookie/js-cookie)
+- [Transfonter]()
 
 #### TODO
 - [AirBnB React Syntax Style Guide](https://github.com/airbnb/javascript/tree/master/react)
@@ -28,7 +29,6 @@
 - [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
 - [Babel Plugin React CSS Modules](https://github.com/gajus/babel-plugin-react-css-modules) used in conjunction with [Sass](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html)
 - [Post CSS](https://github.com/postcss/postcss)
-- [Transfonter]()
 
 #### Asset Pipeline
 - [Auto Prefixer](https://github.com/postcss/autoprefixer)
@@ -64,13 +64,18 @@
 
 ## Conventions
 
+#### ES6 [Guide]()
+
+#### Grid System
+
+
 #### Internationalization [Guide](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
   - Use `<FormattedMessage></FormattedMessage>` when you need the text to have a span in it
   - Use React-Intl API for just plain text
   - `FormattedMessage` id prop should follow the convention `componentName.idLocaltoComponent`;
 
-#### Responsive Text System
+#### Responsive Text System [Guide](https://github.com/modularscale/modularscale-sass)
   - Uses the modular scale
   - Mobile first 16px base
   - Desktop 18px base
-  - Uses perfect-fourth modular scaling system
+  - Uses "perfect-fourth" modular scaling system

@@ -1,10 +1,10 @@
 import React, { PropTypes, Component } from 'react';
 import { FormattedMessage, intlShape, injectIntl, defineMessages } from 'react-intl';
 
-import TodoTextInput from './TodoTextInput';
-import IconReact from '../../assets/icons/icon-react.inline.svg';
+import TodoTextInput from '../TodoTextInput/';
+import IconReact from '../../../assets/icons/icon-react.inline.svg';
 
-import './Header.scss';
+import './index.scss';
 
 const messages = defineMessages({
   appSubTitle: {
