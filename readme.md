@@ -65,17 +65,37 @@
 ## Conventions
 
 #### ES6 [Guide]()
+  - Custom ES6 Guide Forked
 
-#### Grid System
+#### Responsive Grid System [Guide]()
+  - Bootstrap 4 Documentation
+  - How to use Grid Component Architecture
 
+#### Responsive Text System [Guide](https://github.com/modularscale/modularscale-sass)
+  - Uses sass modular scale
+  - Mobile first 16px base
+  - Desktop 18px base
+  - Uses "perfect-fourth" modular scaling system
+
+#### Icons [Guide]()
+  - SVG React Loader Documentation
+  - Sizes & Component Documentation
+  - Create Component
+
+#### Images [Guide]()
+  - URL Loader Documentation
+  - Component Documentation
+  - Create Component
+
+#### Validation
+  - Choose a Redux Validation Framework
+  - Document Validation on Components
 
 #### Internationalization [Guide](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
   - Use `<FormattedMessage></FormattedMessage>` when you need the text to have a span in it
   - Use React-Intl API for just plain text
   - `FormattedMessage` id prop should follow the convention `componentName.idLocaltoComponent`;
+  - Document Component
 
-#### Responsive Text System [Guide](https://github.com/modularscale/modularscale-sass)
-  - Uses the modular scale
-  - Mobile first 16px base
-  - Desktop 18px base
-  - Uses "perfect-fourth" modular scaling system
+#### React Middlewear
+ - 
