@@ -77,7 +77,7 @@ class MainSection extends Component {
     return (
       <Grid>
         <Row>
-          <Col>
+          <Col cols={ { default: 12, sm: 12, md: 12, lg: 6, xl: 6 } }>
             <section className="main">
               {this.renderToggleAll(completedCount)}
               <ul className="todo-list">

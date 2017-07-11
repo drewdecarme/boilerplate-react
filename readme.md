@@ -77,7 +77,7 @@
 #### ES6 [Guide]()
   - Custom ES6 Guide Forked
 
-#### Responsive Grid System [Guide]()
+#### Responsive Grid System [Guide](https://v4-alpha.getbootstrap.com/layout/grid/)
   - Bootstrap 4 Documentation
   - How to use Grid Component Architecture
   - Add and Create Grid Component

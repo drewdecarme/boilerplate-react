@@ -104,6 +104,7 @@
       "after": true
     }],
     "no-var": 2,
-    "prefer-const": 2
+    "prefer-const": 2,
+    "no-console": 0
   }
 }
