@@ -72,7 +72,8 @@
     "url-loader": "^0.5.9",
     "webpack": "^2.2.1",
     "webpack-dev-middleware": "^1.10.1",
-    "webpack-hot-middleware": "^2.17.0"
+    "webpack-hot-middleware": "^2.17.0",
+    "@storybook/react": "^3.1.8"
   },
   "scripts": {
     "build": "gulp",
@@ -82,6 +83,8 @@
     "test:auto": "gulp test:auto",
     "lint:js": "node_modules/eslint/bin/eslint.js --ext .js,.jsx src/",
     "lint:js:fix": "node_modules/eslint/bin/eslint.js --fix --ext .js,.jsx src/",
-    "lint:js:help": "node_modules/eslint/bin/eslint.js -h"
+    "lint:js:help": "node_modules/eslint/bin/eslint.js -h",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook"
   }
 }
