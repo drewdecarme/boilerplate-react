@@ -7,9 +7,17 @@ export const Grid = props => (
   <div styleName="container">{ props.children }</div>
 );
 
-export const Row = props => (
-  <div styleName="row">{ props.children }</div>
-);
+export const Row = props => {
+  const { noGutters } = props;
+
+  const renderGutters = str => (str === true ? 'no-gutters' : '');
+
+  const renderClass = () => [renderGutters(noGutters)].join(' ');
+
+  return (
+    <div styleName={ renderClass() }>{ props.children }</div>
+  );
+};
 
 export const Col = props => {
   const { cols } = props;
@@ -30,10 +38,22 @@ export const Col = props => {
 };
 
 Grid.propTypes = { children: PropTypes.node.isRequired };
-Row.propTypes = { children: React.PropTypes.node.isRequired };
+
+Row.propTypes = {
+  children: PropTypes.node.isRequired,
+  noGutters: PropTypes.bool
+  // justify: PropTypes.object,
+  // align: PropTypes.string,
+};
+Row.defaultProps = {
+  noGutters: true
+  // justify: {},
+  // align: '',
+};
+
 Col.propTypes = {
   children: PropTypes.node.isRequired,
   cols: PropTypes.object
 };
-
 Col.defaultProps = { cols: {}};
+
