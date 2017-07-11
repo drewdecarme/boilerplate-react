@@ -9,7 +9,7 @@ import './index.scss';
 const messages = defineMessages({
   appSubTitle: {
     id: 'header.subtitle',
-    defaultMessage: 'Subtitle (React-intl API)',
+    defaultMessage: 'React + Redux + Webpack',
     description: 'application subtitle'
   }
 });
@@ -28,14 +28,14 @@ class Header extends Component {
 
   render() {
     return (
-      <header className="header" styleName="test">
+      <header className="header" styleName="header">
         <IconReact />
-        <h3>
+        <h1>
           <FormattedMessage
             id="header.title"
-            defaultMessage="Title (React-intl Component)"
+            defaultMessage="JS Boilerplate"
             description="title message of the application" />
-        </h3>
+        </h1>
         <h4>{ this.props.intl.formatMessage(messages.appSubTitle) }</h4>
         <TodoTextInput
           newTodo

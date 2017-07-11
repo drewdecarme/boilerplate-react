@@ -1,3 +1,13 @@
-.test{
-  background: red;
+.header{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 20px 0;
+
+  & > svg{
+    width: 100px;
+    height: 100px;
+    margin: 0 auto;
+  }
 }
