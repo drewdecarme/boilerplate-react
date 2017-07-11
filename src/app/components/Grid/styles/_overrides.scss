@@ -1,0 +1,5 @@
+// Import the variables list... Any variables that need to be overwritten
+// can go in the src/styles/_variables.scss file. They will be imported here
+// and then overwrite any variables in the base bootstrap grid style
+
+@import '../../../styles/variables';
