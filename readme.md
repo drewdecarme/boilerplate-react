@@ -65,6 +65,15 @@
 ## Conventions
 
 ### Creating a Component
+When adding a new component, it should be symantically named and placed within the `src > app > components` directory. Before it is added to the afore mentioned directory, it sholuld be created within the **stories** directory. Within its new directory, the component should contain 3 files:
+
+  1. `index.jsx` will be the main file which contains the React component code
+  2. `index.scss` is the corresponding Sass stylesheet for that component
+  3. `index.spec.js` will contain the unit tests for the component
+
+The purpose for repeating the index namespace continually is due to reducing the need to include resolved file extensions defined in both the webpack development and production builds.
+
+Tasks
   - [ ] Document creating a component
 
 ### Sass Style Guide
