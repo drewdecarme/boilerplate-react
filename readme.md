@@ -70,55 +70,54 @@
 #### Sass Style Guide
   - Look into creating style guide
 
-#### Component Library
-  - Implement storybook
-  - Document storybook
+#### Component Library - [Guide & Documentation]()
+  - [x] Implement Storybook
+  - [ ] Document Storybook
 
-#### ES6 [Guide]()
-  - Custom ES6 Guide Forked
+#### ES6 [Guide & Documentation]()
+  - [ ] Fork Custom ES6 Markdown Cheat Sheet
 
-#### Responsive Grid System [Guide](https://v4-alpha.getbootstrap.com/layout/grid/)
+#### Responsive Grid System [Guide & Documentation](https://v4-alpha.getbootstrap.com/layout/grid/)
   - Bootstrap 4 Documentation
   - How to use Grid Component Architecture
   - Add and Create Grid Component
   - Rows
-    - [x] Horizontal Alignment [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#horizontal-alignment)
-    - [x] Variable Width Content [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#variable-width-content)
-    - [x] Vertical Alignment [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
-    - [x] No Gutters [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#no-gutters)
+    - [x] Horizontal Alignment [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#horizontal-alignment)
+    - [x] Variable Width Content [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#variable-width-content)
+    - [x] Vertical Alignment [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
+    - [x] No Gutters [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#no-gutters)
   - Columns
-    - [ ] Vertical Self Align [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
-    - [ ] Responsive Column Ordering [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#flex-order)
-    - [ ] Offsetting Columns [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#offsetting-columns)
+    - [ ] Vertical Self Align [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
+    - [ ] Responsive Column Ordering [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#flex-order)
+    - [ ] Offsetting Columns [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#offsetting-columns)
   - Documentation Todos
     - [ ] Markdown Props for the above
 
-
-#### Responsive Text System [Guide](https://github.com/modularscale/modularscale-sass)
+#### Responsive Text System - [Guide & Documentation](https://github.com/modularscale/modularscale-sass)
   - Uses sass modular scale
   - Mobile first 16px base
   - Desktop 18px base
   - Uses "perfect-fourth" modular scaling system
 
-#### Icons [Guide]()
+#### Icons - [Guide & Documentation]()
   - SVG React Loader Documentation
   - Sizes & Component Documentation
   - Create Component
 
-#### Images [Guide]()
+#### Images - [Guide & Documentation]()
   - URL Loader Documentation
   - Component Documentation
   - Create Component
 
-#### Validation
-  - Choose a Redux Validation Framework
-  - Document Validation on Components
-
-#### Internationalization [Guide](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
+#### Internationalization [Guide & Documentation](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
   - Use `<FormattedMessage></FormattedMessage>` when you need the text to have a span in it
   - Use React-Intl API for just plain text
   - `FormattedMessage` id prop should follow the convention `componentName.idLocaltoComponent`;
   - Document Component
+
+#### Validation
+  - Choose a Redux Validation Framework
+  - Document Validation on Components
 
 #### React Middlewear
  - 
