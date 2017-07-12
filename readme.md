@@ -64,24 +64,24 @@
 
 ## Conventions
 
-#### Creating a Component
+### Creating a Component
   - [ ] Document creating a component
 
-#### Sass Style Guide
+### Sass Style Guide
 Module - [TBD]()
   - [ ] Look into creating style guide
 
-#### Component Library
+### Component Library
 Module - [React Storybook](https://storybook.js.org/)
   - [x] Implement Storybook
   - [ ] Align Storybook config to current Webpack development config
   - [ ] Document Storybook
 
-#### ES6
+### ES6
 Module - [Cheat Sheet]()
   - [ ] Fork Custom ES6 Markdown Cheat Sheet
 
-#### Responsive Grid System
+### Responsive Grid System
 Module - [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/)
   - How to use Grid Component Architecture
   - Add and Create Grid Component
@@ -95,44 +95,44 @@ Module - [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/)
     - [x] Vertical Self Align [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
     - [ ] Markdown Props for the above
 
-#### Responsive Text System
+### Responsive Text System
 Module - [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
   - Uses sass modular scale
   - Mobile first 16px base
   - Desktop 18px base
   - Uses "perfect-fourth" modular scaling system
 
-#### Icons
+### Icons
 Module - [SVG React Loader](https://github.com/jhamlet/svg-react-loader)
   - SVG React Loader Documentation
   - Sizes & Component Documentation
   - Create Component
 
-#### Images
+### Images
 Module - [URL Loader](https://github.com/webpack-contrib/url-loader)
   - URL Loader Documentation
   - Component Documentation
   - Create Component
 
-#### Internationalization
+### Internationalization
 Module - [React-intl](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
   - Use `<FormattedMessage></FormattedMessage>` when you need the text to have a span in it
   - Use React-Intl API for just plain text
   - `FormattedMessage` id prop should follow the convention `componentName.idLocaltoComponent`;
   - Document Component
 
-#### Unit Testing
+### Unit Testing
 Module - [Mocha & Chai || Jasmine]()
 
-#### Validation
+### Validation
 Module - [TBD]()
   - Choose a Redux Validation Framework
   - Document Validation on Components
 
-#### React Middlewear
+### React Middlewear
 Module - [TBD]()
  - Documentation TBD
 
-#### Cookies
+### Cookies
 Module - [JSCookie]()
  - [ ] Documentation TBD
