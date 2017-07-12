@@ -68,11 +68,11 @@
   - [ ] Document creating a component
 
 ### Sass Style Guide
-#### [TBD]()
+[TBD]()
   - [ ] Look into creating style guide
 
 ### Component Library
-#### [React Storybook](https://storybook.js.org/)
+[React Storybook](https://storybook.js.org/)
   - [x] Implement Storybook
   - [ ] Align Storybook config to current Webpack development config
   - [ ] Document Storybook
