@@ -8,14 +8,16 @@ export const Grid = props => (
 );
 
 export const Row = props => {
-  const { noGutters } = props;
+  const { noGutters, align } = props;
 
-  const renderGutters = str => (str === true ? 'no-gutters' : '');
+  const renderAlign = orientation => orientation !== '' ? `align-items-${orientation}` : '';
 
-  const renderClass = () => [renderGutters(noGutters)].join(' ');
+  const renderGutters = bool => bool === true ? 'no-gutters' : '';
+
+  const renderRow = () => ['row', renderGutters(noGutters), renderAlign(align)].join(' ');
 
   return (
-    <div styleName={ renderClass() }>{ props.children }</div>
+    <div styleName={ renderRow() }>{ props.children }</div>
   );
 };
 
@@ -41,14 +43,12 @@ Grid.propTypes = { children: PropTypes.node.isRequired };
 
 Row.propTypes = {
   children: PropTypes.node.isRequired,
-  noGutters: PropTypes.bool
-  // justify: PropTypes.object,
-  // align: PropTypes.string,
+  noGutters: PropTypes.bool,
+  align: PropTypes.string
 };
 Row.defaultProps = {
-  noGutters: true
-  // justify: {},
-  // align: '',
+  noGutters: true,
+  align: ''
 };
 
 Col.propTypes = {
