@@ -34,7 +34,7 @@ export const Row = props => {
 };
 
 export const Col = props => {
-  const { cols, offset } = props;
+  const { cols, offset, align } = props;
 
   const mapNormalCols = normalCols => {
     if (typeof normalCols !== 'undefined') {
@@ -64,7 +64,9 @@ export const Col = props => {
     return '';
   };
 
-  const renderCols = () => ['col', mapNormalCols(cols), mapOffsetCols(offset)].join(' ');
+  const renderAlignSelf = align => align !== 'undefined' ? `align-self-${align}` : '';
+
+  const renderCols = () => ['col', mapNormalCols(cols), mapOffsetCols(offset), renderAlignSelf(align)].join(' ');
 
   return (
     <div styleName={ renderCols() }>{ props.children }</div>
@@ -84,7 +86,8 @@ Row.propTypes = {
 Col.propTypes = {
   children: PropTypes.node.isRequired,
   cols: PropTypes.object,
-  offset: PropTypes.object
+  offset: PropTypes.object,
+  align: PropTypes.oneOf(['start', 'center', 'end'])
 };
 
 Row.defaultProps = {
@@ -97,5 +100,6 @@ Row.defaultProps = {
 };
 Col.defaultProps = {
   cols: undefined,
-  offset: undefined
+  offset: undefined,
+  align: undefined
 };
