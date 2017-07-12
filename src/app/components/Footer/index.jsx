@@ -29,10 +29,10 @@ class Footer extends Component {
     return (
       <button
         className={ classnames({ selected: filter === selectedFilter }) }
-        style={ { cursor: 'pointer' } }
+        style={{ cursor: 'pointer' }}
         onClick={ handleChange }
         >
-        {title}
+        { title }
       </button>
     );
   }
@@ -54,15 +54,15 @@ class Footer extends Component {
   render() {
     return (
       <footer className="footer">
-        {this.renderTodoCount()}
+        { this.renderTodoCount() }
         <ul className="filters">
-          {[SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED].map(filter =>
+          { [SHOW_ALL, SHOW_ACTIVE, SHOW_COMPLETED].map(filter =>
             (<li key={ filter }>
-              {this.renderFilterLink(filter)}
+              { this.renderFilterLink(filter) }
             </li>)
-          )}
+          ) }
         </ul>
-        {this.renderClearButton()}
+        { this.renderClearButton() }
       </footer>
     );
   }

@@ -77,21 +77,22 @@ class MainSection extends Component {
     return (
       <Grid>
         <Row
+          justify={{ orient: 'around', size: 'lg' }}
           align="end"
           noGutters>
-          <Col cols={ { default: 12, sm: 12, md: 12, lg: 6, xl: 6 } }>
+          <Col cols={{ default: 12, sm: 12, md: 12, lg: 6, xl: 6 }}>
             <section className="main">
-              {this.renderToggleAll(completedCount)}
+              { this.renderToggleAll(completedCount) }
               <ul className="todo-list">
-                {filteredTodos.map(todo =>
+                { filteredTodos.map(todo =>
                   (<TodoItem
                     key={ todo.id }
                     todo={ todo }
                     { ...actions }
                     />)
-                )}
+                ) }
               </ul>
-              {this.renderFooter(completedCount)}
+              { this.renderFooter(completedCount) }
             </section>
           </Col>
         </Row>

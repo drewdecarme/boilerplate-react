@@ -29,9 +29,9 @@
 - [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
 - [Babel Plugin React CSS Modules](https://github.com/gajus/babel-plugin-react-css-modules) used in conjunction with [Sass](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html)
 - [Post CSS](https://github.com/postcss/postcss)
+- [Auto Prefixer](https://github.com/postcss/autoprefixer)
 
 #### Asset Pipeline
-- [Auto Prefixer](https://github.com/postcss/autoprefixer)
 - [ESLint](http://eslint.org/) based upon [AirBnB Best Practices](https://github.com/airbnb/javascript/tree/master/linters)
 - [Webpack 2](https://webpack.js.org/) based upon a cool ["how to"](https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783)
 - [Hot Module Replacement](https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.xh6v0ht7j) ([React Hot Loader 3](https://github.com/gaearon/react-hot-loader/issues/243))
@@ -81,6 +81,18 @@
   - Bootstrap 4 Documentation
   - How to use Grid Component Architecture
   - Add and Create Grid Component
+  - Rows
+    - [x] Horizontal Alignment [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#horizontal-alignment)
+    - [x] Variable Width Content [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#variable-width-content)
+    - [x] Vertical Alignment [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
+    - [x] No Gutters [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#no-gutters)
+  - Columns
+    - [ ] Vertical Self Align [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
+    - [ ] Responsive Column Ordering [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#flex-order)
+    - [ ] Offsetting Columns [Docs](https://v4-alpha.getbootstrap.com/layout/grid/#offsetting-columns)
+  - Documentation Todos
+    - [ ] Markdown Props for the above
+
 
 #### Responsive Text System [Guide](https://github.com/modularscale/modularscale-sass)
   - Uses sass modular scale

@@ -60,7 +60,7 @@ class TodoItem extends Component {
             htmlFor="toggle-checkbox"
             onDoubleClick={ this.handleDoubleClick }
             >
-            {todo.text}
+            { todo.text }
           </label>
           <button
             className="destroy"
@@ -77,7 +77,7 @@ class TodoItem extends Component {
           editing: this.state.editing
         }) }
         >
-        {element}
+        { element }
       </li>
     );
   }

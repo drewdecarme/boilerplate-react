@@ -8,13 +8,25 @@ export const Grid = props => (
 );
 
 export const Row = props => {
-  const { noGutters, align } = props;
+  const { noGutters, align, justify } = props;
 
-  const renderAlign = orientation => orientation !== '' ? `align-items-${orientation}` : '';
+  const renderJustify = justify => {
+    const { orient, size } = justify;
+
+    if (typeof orient !== 'undefined' && typeof size !== 'undefined') {
+      return `justify-${size}-content-${orient}`;
+    } else if (typeof orient !== 'undefined') {
+      return `justify-content-${orient}`;
+    }
+
+    return '';
+  };
+
+  const renderAlign = orient => typeof orient !== 'undefined' ? `align-items-${orient}` : '';
 
   const renderGutters = bool => bool === true ? 'no-gutters' : '';
 
-  const renderRow = () => ['row', renderGutters(noGutters), renderAlign(align)].join(' ');
+  const renderRow = () => ['row', renderGutters(noGutters), renderAlign(align), renderJustify(justify)].join(' ');
 
   return (
     <div styleName={ renderRow() }>{ props.children }</div>
@@ -44,11 +56,19 @@ Grid.propTypes = { children: PropTypes.node.isRequired };
 Row.propTypes = {
   children: PropTypes.node.isRequired,
   noGutters: PropTypes.bool,
-  align: PropTypes.string
+  align: PropTypes.oneOf(['start', 'center', 'end']),
+  justify: PropTypes.shape({
+    orient: PropTypes.oneOf(['start', 'center', 'end', 'around', 'between']),
+    size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl'])
+  })
 };
 Row.defaultProps = {
   noGutters: true,
-  align: ''
+  align: undefined,
+  justify: {
+    orient: undefined,
+    size: undefined
+  }
 };
 
 Col.propTypes = {
