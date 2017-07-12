@@ -73,9 +73,6 @@ When adding a new component, it should be symantically named and placed within t
 
 The purpose for repeating the index namespace continually is due to reducing the need to include resolved file extensions defined in both the webpack development and production builds.
 
-Tasks
-  - [ ] Document creating a component
-
 ### Sass Style Guide
 Module - [TBD]()
   - [ ] Look into creating style guide
