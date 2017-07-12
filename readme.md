@@ -64,22 +64,25 @@
 
 ## Conventions
 
-#### Creating a Component
+### Creating a Component
   - [ ] Document creating a component
 
-#### Sass Style Guide
+### Sass Style Guide
+#### [TBD]()
   - [ ] Look into creating style guide
 
-#### Component Library - [React Storybook](https://storybook.js.org/)
+### Component Library
+#### [React Storybook](https://storybook.js.org/)
   - [x] Implement Storybook
   - [ ] Align Storybook config to current Webpack development config
   - [ ] Document Storybook
 
-#### ES6 [Guide & Documentation]()
+### ES6
+#### [Cheat Sheet]()
   - [ ] Fork Custom ES6 Markdown Cheat Sheet
 
-#### Responsive Grid System - [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/)
-  - Bootstrap 4 Documentation
+### Responsive Grid System
+#### [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/)
   - How to use Grid Component Architecture
   - Add and Create Grid Component
   - Rows
@@ -90,40 +93,46 @@
   - Columns
     - [x] Offsetting Columns [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#offsetting-columns)
     - [x] Vertical Self Align [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
-    - [ ] Responsive Column Ordering [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#flex-order)
-  - Documentation Todos
     - [ ] Markdown Props for the above
 
-#### Responsive Text System - [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
+### Responsive Text System
+#### [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
   - Uses sass modular scale
   - Mobile first 16px base
   - Desktop 18px base
   - Uses "perfect-fourth" modular scaling system
 
-#### Icons - [SVG React Loader](https://github.com/jhamlet/svg-react-loader)
+### Icons
+#### [SVG React Loader](https://github.com/jhamlet/svg-react-loader)
   - SVG React Loader Documentation
   - Sizes & Component Documentation
   - Create Component
 
-#### Images - [URL Loader](https://github.com/webpack-contrib/url-loader)
+### Images
+#### [URL Loader](https://github.com/webpack-contrib/url-loader)
   - URL Loader Documentation
   - Component Documentation
   - Create Component
 
-#### Internationalization - [React-intl](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
+### Internationalization
+#### [React-intl](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
   - Use `<FormattedMessage></FormattedMessage>` when you need the text to have a span in it
   - Use React-Intl API for just plain text
   - `FormattedMessage` id prop should follow the convention `componentName.idLocaltoComponent`;
   - Document Component
 
-#### Unit Testing (Mocha & Chai)
+### Unit Testing
+#### [Mocha & Chai || Jasmine]()
 
-#### Validation 
+### Validation
+#### [TBD]()
   - Choose a Redux Validation Framework
   - Document Validation on Components
 
-#### React Middlewear
- - 
+### React Middlewear
+#### [TBD]()
+ - Documentation TBD
 
-#### Cookies
- - 
+### Cookies
+#### [JSCookie]()
+ - [ ] Documentation TBD
