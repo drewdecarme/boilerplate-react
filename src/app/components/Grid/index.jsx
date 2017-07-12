@@ -34,25 +34,44 @@ export const Row = props => {
 };
 
 export const Col = props => {
-  const { cols } = props;
+  const { cols, offset } = props;
 
-  const parseCols = cols => (
-    Object.keys(cols).map(e => {
-      if (e === 'default') {
-        return `col-${cols[e]}`;
-      }
+  const mapNormalCols = normalCols => {
+    if (typeof normalCols !== 'undefined') {
+      return Object.keys(normalCols).map(e => {
+        if (e === 'default') {
+          return `col-${normalCols[e]}`;
+        }
 
-      return `col-${e}-${cols[e]}`;
-    }).join(' ')
-  );
+        return `col-${e}-${normalCols[e]}`;
+      }).join(' ');
+    }
+
+    return '';
+  };
+
+  const mapOffsetCols = offsetCols => {
+    if (typeof offsetCols !== 'undefined') {
+      return Object.keys(offsetCols).map(e => {
+        if (e === 'default') {
+          return `offset-${offsetCols[e]}`;
+        }
+
+        return `offset-${e}-${offsetCols[e]}`;
+      }).join(' ');
+    }
+
+    return '';
+  };
+
+  const renderCols = () => ['col', mapNormalCols(cols), mapOffsetCols(offset)].join(' ');
 
   return (
-    <div styleName={ parseCols(cols) }>{ props.children }</div>
+    <div styleName={ renderCols() }>{ props.children }</div>
   );
 };
 
 Grid.propTypes = { children: PropTypes.node.isRequired };
-
 Row.propTypes = {
   children: PropTypes.node.isRequired,
   noGutters: PropTypes.bool,
@@ -62,6 +81,12 @@ Row.propTypes = {
     size: PropTypes.oneOf(['sm', 'md', 'lg', 'xl'])
   })
 };
+Col.propTypes = {
+  children: PropTypes.node.isRequired,
+  cols: PropTypes.object,
+  offset: PropTypes.object
+};
+
 Row.defaultProps = {
   noGutters: true,
   align: undefined,
@@ -70,10 +95,7 @@ Row.defaultProps = {
     size: undefined
   }
 };
-
-Col.propTypes = {
-  children: PropTypes.node.isRequired,
-  cols: PropTypes.object
+Col.defaultProps = {
+  cols: undefined,
+  offset: undefined
 };
-Col.defaultProps = { cols: {}};
-

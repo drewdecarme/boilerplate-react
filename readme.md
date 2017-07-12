@@ -88,9 +88,9 @@
     - [x] Vertical Alignment [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
     - [x] No Gutters [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#no-gutters)
   - Columns
+    - [X] Offsetting Columns [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#offsetting-columns)
     - [ ] Vertical Self Align [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
     - [ ] Responsive Column Ordering [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#flex-order)
-    - [ ] Offsetting Columns [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#offsetting-columns)
   - Documentation Todos
     - [ ] Markdown Props for the above
 
@@ -115,6 +115,8 @@
   - Use React-Intl API for just plain text
   - `FormattedMessage` id prop should follow the convention `componentName.idLocaltoComponent`;
   - Document Component
+
+#### Unit Testing (Mocha & Chai)
 
 #### Validation 
   - Choose a Redux Validation Framework
