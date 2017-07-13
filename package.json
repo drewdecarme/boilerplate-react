@@ -83,8 +83,6 @@
     "test:auto": "gulp test:auto",
     "lint:js": "node_modules/eslint/bin/eslint.js --ext .js,.jsx src/",
     "lint:js:fix": "node_modules/eslint/bin/eslint.js --fix --ext .js,.jsx src/",
-    "lint:js:help": "node_modules/eslint/bin/eslint.js -h",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "lint:js:help": "node_modules/eslint/bin/eslint.js -h"
   }
 }
