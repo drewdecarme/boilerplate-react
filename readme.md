@@ -1,47 +1,37 @@
 # React / Redux Boilerplate
 
 ## Table of Contents
-  1. [Features](#features)
-  2. [Getting Started](#getting-started)
-  3. [Guidelines and Examples]()
+  1. [Getting Started](#getting-started)
+  2. [Scripts](#scripts)
+  3. [Credits](#credits)
+  4. [Features](#features)
 
-## Features
+
+
+## Credits
 #### Javscript
-- [React](https://facebook.github.io/react) 
+- [React](https://facebook.github.io/react)
 - [React Router](https://reacttraining.com/react-router/)
-- [ES6](http://es6-features.org) (with [Babel](https://babeljs.io))
 - [Redux](http://redux.js.org/)
-
-#### Internationalization
-- [React Intl](https://github.com/yahoo/react-intl)
-- [Babel Plugin React Intl](https://github.com/yahoo/babel-plugin-react-intl)
-
-#### Evaluating
-- [JS Cookie](https://github.com/js-cookie/js-cookie)
-- [Transfonter]()
-
-#### TODO
+- [ES6](http://es6-features.org) (with [Babel](https://babeljs.io))
 - [AirBnB React Syntax Style Guide](https://github.com/airbnb/javascript/tree/master/react)
-- [React Storybook](https://github.com/storybooks/storybook)
-  
+- [ESLint](http://eslint.org/) based upon [AirBnB Best Practices](https://github.com/airbnb/javascript/tree/master/linters)
+- [JS Cookie](https://github.com/js-cookie/js-cookie)
+
 #### Style
-- [Bootstrap 4 (Grid Only)](https://v4-alpha.getbootstrap.com/) Note Style is commented out by default
-- [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
+- [Bootstrap 4 (Grid Only)](https://v4-alpha.getbootstrap.com/)
 - [Babel Plugin React CSS Modules](https://github.com/gajus/babel-plugin-react-css-modules) used in conjunction with [Sass](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html)
+- [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
 - [Post CSS](https://github.com/postcss/postcss)
 - [Auto Prefixer](https://github.com/postcss/autoprefixer)
 
 #### Asset Pipeline
-- [ESLint](http://eslint.org/) based upon [AirBnB Best Practices](https://github.com/airbnb/javascript/tree/master/linters)
 - [Webpack 2](https://webpack.js.org/) based upon a cool ["how to"](https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783)
 - [Hot Module Replacement](https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.xh6v0ht7j) ([React Hot Loader 3](https://github.com/gaearon/react-hot-loader/issues/243))
-- [Webpack Visualizer](https://chrisbateman.github.io/webpack-visualizer/)
-- [Webpack-dev-server](https://webpack.js.org/how-to/develop/#webpack-dev-server)
 - [Gulp](http://gulpjs.com/)
 - [Browser Sync](https://www.browsersync.io/)
 - [Yarn](https://yarnpkg.com/en/)
 
-#### Plugins
 
 
 ## Getting Started
@@ -51,7 +41,9 @@
   4. Start the solution `yarn start`
   5. A browser window will open with the solution (if it doesn't open, navigate to [http://localhost:3000/](http://localhost:3000))
 
-#### Build Scripts
+
+
+## Build Scripts
   1. `yarn start` Starts **development** instance
   2. `yarn preview` Previews the **production** instance
   3. `yarn build` Builds the **production** instance
@@ -62,8 +54,9 @@
   8. `yarn lint:js:fix` Auto fixes `.js && .jsx` errors
   8. `yarn lint:js:help` Displays help for Eslint CLI
 
-## Conventions
 
+
+## Features
 ### Creating a Component
 When adding a new component, it should be symantically named and placed within the `src > app > components` directory. Before it is added to the afore mentioned directory, it sholuld be created within the **stories** directory. Within its new directory, the component should contain 3 files:
 
@@ -124,6 +117,8 @@ Module - [React-intl](https://www.smashingmagazine.com/2017/01/internationalizin
   - Use React-Intl API for just plain text
   - `FormattedMessage` id prop should follow the convention `componentName.idLocaltoComponent`;
   - Document Component
+  - [React Intl](https://github.com/yahoo/react-intl)
+  - [Babel Plugin React Intl](https://github.com/yahoo/babel-plugin-react-intl)
 
 ### Unit Testing
 Module - [Mocha & Chai || Jasmine]()
