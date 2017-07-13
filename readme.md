@@ -69,10 +69,17 @@ When adding a new component, it should be symantically named and placed within t
 
 The purpose for repeating the index namespace continually is due to reducing the need to include resolved file extensions defined in both the webpack development and production builds.
 
-Todo
+#### Styleguide
+This solution utilizes a concept of a Living Style Guide generated directly from the code of each of the React Components. Outside of a markdown file and some comments in each of the components, there is no other work required to maintain the styleguide; a convention which is missing from most projects. React Styleguideist parses the entire component library, the markdown files associated with each component, the comments inside of each of the components, and compiles each .scss file imported into the component to create a comprehensive styleguide that can be viewed, shared, and edited in real time.
+
+  - **To create the styleguide** refer to the [Build Scripts](#build-scripts)
+  - **To document a component** refer to the [documentation](https://react-styleguidist.js.org/docs/documenting.html)
+  - **To configure the layout of the styleguide** refer to [configuration documentation](https://react-styleguidist.js.org/docs/configuration.html)
+
+**Todo**
   - [x] Implement Styleguidist
-  - [ ] Align Styleguidist config to current Webpack development config
-  - [ ] Configure Styleguidist
+  - [x] Align Styleguidist config to current Webpack development config
+  - [ ] Configure Styleguidist Layout and Components to a working state
   - [ ] Add ES6 Cheat Sheet Fork Custom ES6 Markdown Cheat Sheet
 
 ### Responsive Grid System
