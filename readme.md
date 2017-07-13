@@ -57,7 +57,10 @@
 
 
 ## Features
-### Creating a Component
+### Component Library & Style Guide
+The component library utilizes [React Styleguidist](https://react-styleguidist.js.org/) with the projects custom webpack configuration. React Styleguidist is and isolated React component development environment with a living style guide.
+
+#### Creating a Component
 When adding a new component, it should be symantically named and placed within the `src > app > components` directory. Before it is added to the afore mentioned directory, it sholuld be created within the **stories** directory. Within its new directory, the component should contain 3 files:
 
   1. `index.jsx` will be the main file which contains the React component code
@@ -66,17 +69,11 @@ When adding a new component, it should be symantically named and placed within t
 
 The purpose for repeating the index namespace continually is due to reducing the need to include resolved file extensions defined in both the webpack development and production builds.
 
-### Component Library & Style Guide
-The component library utilizes [React Styleguidist](https://react-styleguidist.js.org/) with the projects custom webpack configuration. React Styleguidist is and isolated React component development environment with a living style guide.
-
 Todo
   - [x] Implement Styleguidist
   - [ ] Align Styleguidist config to current Webpack development config
-  - [ ] Configure Storybook
-
-### ES6
-Module - [Cheat Sheet]()
-  - [ ] Fork Custom ES6 Markdown Cheat Sheet
+  - [ ] Configure Styleguidist
+  - [ ] Add ES6 Cheat Sheet Fork Custom ES6 Markdown Cheat Sheet
 
 ### Responsive Grid System
 Module - [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/)
