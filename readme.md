@@ -32,7 +32,7 @@
 ### Component Library & Style Guide
 The component library utilizes [React Styleguidist](https://react-styleguidist.js.org/) with the projects custom webpack configuration. React Styleguidist is and isolated React component development environment with a living style guide.
 
-### ES6 (ECMA2015)
+#### ES6 (ECMA2015)
 ES6 should be used throughout this project at all times. ESLint is configured to recognize depricated methodologies and will throw an error in the build. All JS techniques are modeled after the [AirBnB React Syntax Style Guide](https://github.com/airbnb/javascript/tree/master/react). ESLint also extends the conventions that AirBnB uses.
 
 Due to the massive update to the JS spec, you can refer to this [cheat sheet]() here for common concepts such as array and object deconstruction, arrow functions, symbols, and class notation.
@@ -58,21 +58,24 @@ This solution utilizes a concept of a Living Style Guide generated directly from
   - [x] Align Styleguidist config to current Webpack development config
   - [ ] Configure Styleguidist Layout and Components to a working state
   - [ ] Add ES6 Cheat Sheet Fork Custom ES6 Markdown Cheat Sheet
+  - [ ] Review AirBnb react conventions and adjust ESLint file
 
 ### Responsive Grid System
+The [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/) is the basis for the grid system in this project. A custom component with props that model the class structure illustrated in the linked documentation was created due to the way that this project binds CSS class imports to components. Full documentation on the Grid compone, how to use it, and what props to pass it can be found in the Styleguide or in the [.readme within the Grid component]().
 
-Module - [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/)
-  - How to use Grid Component Architecture
-  - Add and Create Grid Component
+Some of the features for Rows and Columns include but aren't limited to:
   - Rows
-    - [x] Horizontal Alignment [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#horizontal-alignment)
-    - [x] Variable Width Content [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#variable-width-content)
-    - [x] Vertical Alignment [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
-    - [x] No Gutters [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#no-gutters)
+    - Horizontal Alignment - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#horizontal-alignment)
+    - Variable Width Content - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#variable-width-content)
+    - Vertical Alignment - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
+    - No Gutters - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#no-gutters)
   - Columns
-    - [x] Offsetting Columns [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#offsetting-columns)
-    - [x] Vertical Self Align [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
-    - [ ] Markdown Props for the above
+    - Offsetting Columns - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#offsetting-columns)
+    - Vertical Self Align - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
+
+**Todo**
+  - [ ] Create the Grid .readme
+  - [ ] Comment the grid component to align with the style guide
 
 ### Responsive Text System
 Module - [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
