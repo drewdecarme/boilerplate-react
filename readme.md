@@ -3,35 +3,8 @@
 ## Table of Contents
   1. [Getting Started](#getting-started)
   2. [Scripts](#scripts)
-  3. [Credits](#credits)
-  4. [Features](#features)
-
-
-
-## Credits
-#### Javscript
-- [React](https://facebook.github.io/react)
-- [React Router](https://reacttraining.com/react-router/)
-- [Redux](http://redux.js.org/)
-- [ES6](http://es6-features.org) (with [Babel](https://babeljs.io))
-- [AirBnB React Syntax Style Guide](https://github.com/airbnb/javascript/tree/master/react)
-- [ESLint](http://eslint.org/) based upon [AirBnB Best Practices](https://github.com/airbnb/javascript/tree/master/linters)
-- [JS Cookie](https://github.com/js-cookie/js-cookie)
-
-#### Style
-- [Bootstrap 4 (Grid Only)](https://v4-alpha.getbootstrap.com/)
-- [Babel Plugin React CSS Modules](https://github.com/gajus/babel-plugin-react-css-modules) used in conjunction with [Sass](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html)
-- [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
-- [Post CSS](https://github.com/postcss/postcss)
-- [Auto Prefixer](https://github.com/postcss/autoprefixer)
-
-#### Asset Pipeline
-- [Webpack 2](https://webpack.js.org/) based upon a cool ["how to"](https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783)
-- [Hot Module Replacement](https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.xh6v0ht7j) ([React Hot Loader 3](https://github.com/gaearon/react-hot-loader/issues/243))
-- [Gulp](http://gulpjs.com/)
-- [Browser Sync](https://www.browsersync.io/)
-- [Yarn](https://yarnpkg.com/en/)
-
+  3. [Features](#features)
+  4. [Credits](#credits)
 
 
 ## Getting Started
@@ -43,7 +16,7 @@
 
 
 
-## Build Scripts
+## Scripts
   1. `yarn start` Starts **development** instance
   2. `yarn preview` Previews the **production** instance
   3. `yarn build` Builds the **production** instance
@@ -53,7 +26,6 @@
   7. `yarn lint:js` Lints `.js && .jsx`
   8. `yarn lint:js:fix` Auto fixes `.js && .jsx` errors
   8. `yarn lint:js:help` Displays help for Eslint CLI
-
 
 
 ## Features
@@ -139,3 +111,30 @@ Module - [TBD]()
 ### Cookies
 Module - [JSCookie]()
  - [ ] Documentation TBD
+
+
+
+
+## Credits
+#### Javscript
+- [React](https://facebook.github.io/react)
+- [React Router](https://reacttraining.com/react-router/)
+- [Redux](http://redux.js.org/)
+- [ES6](http://es6-features.org) (with [Babel](https://babeljs.io))
+- [AirBnB React Syntax Style Guide](https://github.com/airbnb/javascript/tree/master/react)
+- [ESLint](http://eslint.org/) based upon [AirBnB Best Practices](https://github.com/airbnb/javascript/tree/master/linters)
+- [JS Cookie](https://github.com/js-cookie/js-cookie)
+
+#### Style
+- [Bootstrap 4 (Grid Only)](https://v4-alpha.getbootstrap.com/)
+- [Babel Plugin React CSS Modules](https://github.com/gajus/babel-plugin-react-css-modules) used in conjunction with [Sass](http://sass-lang.com/documentation/file.SCSS_FOR_SASS_USERS.html)
+- [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
+- [Post CSS](https://github.com/postcss/postcss)
+- [Auto Prefixer](https://github.com/postcss/autoprefixer)
+
+#### Asset Pipeline
+- [Webpack 2](https://webpack.js.org/) based upon a cool ["how to"](https://blog.madewithenvy.com/getting-started-with-webpack-2-ed2b86c68783)
+- [Hot Module Replacement](https://medium.com/@dan_abramov/hot-reloading-in-react-1140438583bf#.xh6v0ht7j) ([React Hot Loader 3](https://github.com/gaearon/react-hot-loader/issues/243))
+- [Gulp](http://gulpjs.com/)
+- [Browser Sync](https://www.browsersync.io/)
+- [Yarn](https://yarnpkg.com/en/)
