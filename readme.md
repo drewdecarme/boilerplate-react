@@ -25,7 +25,7 @@
   6. `yarn test:auto` Runs all of the test automatically
   7. `yarn lint:js` Lints `.js && .jsx`
   8. `yarn lint:js:fix` Auto fixes `.js && .jsx` errors
-  8. `yarn lint:js:help` Displays help for Eslint CLI
+  8. `yarn lint:js:help` Displays help for eslint CLI
 
 
 ## Features
@@ -38,20 +38,20 @@ ES6 should be used throughout this project at all times. ESLint is configured to
 Due to the massive update to the JS spec, you can refer to this [cheat sheet]() here for common concepts such as array and object deconstruction, arrow functions, symbols, and class notation.
 
 #### Creating a Component
-When adding a new component, it should be symantically named and placed within the `src > app > components` directory. Before it is added to the afore mentioned directory, it sholuld be created within the **stories** directory. Within its new directory, the component should contain 3 files:
+When adding a new component, it should be semantically named and placed within the `src > app > components` directory. Before it is added to the afore mentioned directory, it should be created within the **stories** directory. Within its new directory, the component should contain 3 files:
 
   1. `index.jsx` will be the main file which contains the React component code
-  2. `index.scss` is the corresponding Sass stylesheet for that component
+  2. `index.scss` is the corresponding Sass style sheet for that component
   3. `index.spec.js` will contain the unit tests for the component
 
-The purpose for repeating the index namespace continually is due to reducing the need to include resolved file extensions defined in both the webpack development and production builds.
+The purpose for repeating the index name-space continually is due to reducing the need to include resolved file extensions defined in both the webpack development and production builds.
 
-#### Styleguide
-This solution utilizes a concept of a Living Style Guide generated directly from the code of each of the React Components. Outside of a markdown file and some comments in each of the components, there is no other work required to maintain the styleguide; a convention which is missing from most projects. React Styleguideist parses the entire component library, the markdown files associated with each component, the comments inside of each of the components, and compiles each `.scss` file imported into the component to create a comprehensive styleguide that can be viewed, shared, and edited in real time.
+#### Style Guide
+This solution utilizes a concept of a Living Style Guide generated directly from the code of each of the React Components. Outside of a markdown file and some comments in each of the components, there is no other work required to maintain the style guide; a convention which is missing from most projects. React Styleguideist parses the entire component library, the markdown files associated with each component, the comments inside of each of the components, and compiles each `.scss` file imported into the component to create a comprehensive styleguide that can be viewed, shared, and edited in real time.
 
   - **To create the styleguide** refer to the [Build Scripts](#build-scripts)
   - **To document a component** refer to the [documentation](https://react-styleguidist.js.org/docs/documenting.html)
-  - **To configure the layout of the styleguide** refer to [configuration documentation](https://react-styleguidist.js.org/docs/configuration.html)
+  - **To configure the layout of the style guide** refer to [configuration documentation](https://react-styleguidist.js.org/docs/configuration.html)
 
 **Todo**
   - [x] Implement Styleguidist
@@ -61,17 +61,18 @@ This solution utilizes a concept of a Living Style Guide generated directly from
   - [ ] Review AirBnb react conventions and adjust ESLint file
 
 ### Responsive Grid System
-The [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/) is the basis for the grid system in this project. A custom component with props that model the class structure illustrated in the linked documentation was created due to the way that this project binds CSS class imports to components. Full documentation on the Grid compone, how to use it, and what props to pass it can be found in the Styleguide or in the [.readme within the Grid component]().
+The [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/) is the basis for the grid system in this project. A custom component with props that model the class structure illustrated in the linked documentation was created due to the way that this project binds CSS class imports to components.
 
-Some of the features for Rows and Columns include but aren't limited to:
-  - Rows
-    - Horizontal Alignment - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#horizontal-alignment)
-    - Variable Width Content - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#variable-width-content)
-    - Vertical Alignment - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
-    - No Gutters - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#no-gutters)
-  - Columns
-    - Offsetting Columns - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#offsetting-columns)
-    - Vertical Self Align - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
+Full documentation on the Grid component, how to use it, and what props to pass it can be found in the Style-guide or in the [.readme within the Grid component](). Some of the features for Rows and Columns include but aren't limited to:
+
+**Rows**
+  - Horizontal Alignment - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#horizontal-alignment)
+  - Variable Width Content - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#variable-width-content)
+  - Vertical Alignment - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
+  - No Gutters - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#no-gutters)
+**Columns**
+  - Offsetting Columns - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#offsetting-columns)
+  - Vertical Self Align - [(Docs)](https://v4-alpha.getbootstrap.com/layout/grid/#vertical-alignment)
 
 **Todo**
   - [ ] Create the Grid .readme
