@@ -82,6 +82,8 @@
     "preview": "gulp serve:dist",
     "test": "gulp test",
     "test:auto": "gulp test:auto",
+    "styleguide": "styleguidist server",
+    "styleguide:build": "styleguidist build",
     "lint:js": "node_modules/eslint/bin/eslint.js --ext .js,.jsx src/",
     "lint:js:fix": "node_modules/eslint/bin/eslint.js --fix --ext .js,.jsx src/",
     "lint:js:help": "node_modules/eslint/bin/eslint.js -h"

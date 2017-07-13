@@ -124,6 +124,6 @@ module.exports = {
     vendor: Object.keys(pkg.dependencies)
   },
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.scss']
   }
 };

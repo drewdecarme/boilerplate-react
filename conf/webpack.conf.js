@@ -37,6 +37,7 @@ module.exports = {
       },
       {
         test: /\.(css|scss)$/,
+        exclude: /node_modules/,
         use: [
           'style-loader',
           {
@@ -99,6 +100,6 @@ module.exports = {
     `./${conf.path.src('index')}`
   ],
   resolve: {
-    extensions: ['.js', '.jsx']
+    extensions: ['.js', '.jsx', '.scss']
   }
 };
