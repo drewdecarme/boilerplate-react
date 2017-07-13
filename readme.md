@@ -32,6 +32,11 @@
 ### Component Library & Style Guide
 The component library utilizes [React Styleguidist](https://react-styleguidist.js.org/) with the projects custom webpack configuration. React Styleguidist is and isolated React component development environment with a living style guide.
 
+### ES6 (ECMA2015)
+ES6 should be used throughout this project at all times. ESLint is configured to recognize depricated methodologies and will throw an error in the build. All JS techniques are modeled after the [AirBnB React Syntax Style Guide](https://github.com/airbnb/javascript/tree/master/react). ESLint also extends the conventions that AirBnB uses.
+
+Due to the massive update to the JS spec, you can refer to this [cheat sheet]() here for common concepts such as array and object deconstruction, arrow functions, symbols, and class notation.
+
 #### Creating a Component
 When adding a new component, it should be symantically named and placed within the `src > app > components` directory. Before it is added to the afore mentioned directory, it sholuld be created within the **stories** directory. Within its new directory, the component should contain 3 files:
 
@@ -42,7 +47,7 @@ When adding a new component, it should be symantically named and placed within t
 The purpose for repeating the index namespace continually is due to reducing the need to include resolved file extensions defined in both the webpack development and production builds.
 
 #### Styleguide
-This solution utilizes a concept of a Living Style Guide generated directly from the code of each of the React Components. Outside of a markdown file and some comments in each of the components, there is no other work required to maintain the styleguide; a convention which is missing from most projects. React Styleguideist parses the entire component library, the markdown files associated with each component, the comments inside of each of the components, and compiles each .scss file imported into the component to create a comprehensive styleguide that can be viewed, shared, and edited in real time.
+This solution utilizes a concept of a Living Style Guide generated directly from the code of each of the React Components. Outside of a markdown file and some comments in each of the components, there is no other work required to maintain the styleguide; a convention which is missing from most projects. React Styleguideist parses the entire component library, the markdown files associated with each component, the comments inside of each of the components, and compiles each `.scss` file imported into the component to create a comprehensive styleguide that can be viewed, shared, and edited in real time.
 
   - **To create the styleguide** refer to the [Build Scripts](#build-scripts)
   - **To document a component** refer to the [documentation](https://react-styleguidist.js.org/docs/documenting.html)
@@ -55,6 +60,7 @@ This solution utilizes a concept of a Living Style Guide generated directly from
   - [ ] Add ES6 Cheat Sheet Fork Custom ES6 Markdown Cheat Sheet
 
 ### Responsive Grid System
+
 Module - [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/)
   - How to use Grid Component Architecture
   - Add and Create Grid Component
