@@ -83,16 +83,16 @@ Full documentation on the Grid component, how to use it, and what props to pass 
 
 #### Configuration
 The base configuration sets the line height to 1.4 units while Mobile and Desktop base text are set to 16px and 18px respectively based upon the response of a tablet sized device.
-```scss
-  $font-line-height: 1.4;
-  $modularscale: (
-    base: 16px,
+```css
+$font-line-height: 1.4;
+$modularscale: (
+  base: 16px,
+  ratio: 1.2,
+  768px: (
+    base: 18px,
     ratio: 1.2,
-    768px: (
-      base: 18px,
-      ratio: 1.2,
-    )
-  );
+  )
+);
 ```
 
 
