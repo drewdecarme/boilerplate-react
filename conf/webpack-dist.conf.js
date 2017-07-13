@@ -61,6 +61,7 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: function(modulePath) {
           return /node_modules/.test(modulePath) &&
+              !/node_modules\/ansi-styles/.test(modulePath) &&
               !/node_modules\/postcss-modules-values/.test(modulePath) &&
               !/node_modules\/postcss-modules-scope/.test(modulePath) &&
               !/node_modules\/postcss-modules-local-by-default/.test(modulePath) &&
@@ -101,6 +102,7 @@ module.exports = {
       compress: {
         unused: true,
         dead_code: true,
+        warnings: false
       }
     }),
     new ExtractTextPlugin('index-[contenthash].css'),
@@ -124,6 +126,6 @@ module.exports = {
     vendor: Object.keys(pkg.dependencies)
   },
   resolve: {
-    extensions: ['.js', '.jsx', '.scss']
+    extensions: ['.js', '.jsx']
   }
 };
