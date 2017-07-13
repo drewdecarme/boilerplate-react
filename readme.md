@@ -79,7 +79,23 @@ Full documentation on the Grid component, how to use it, and what props to pass 
   - [ ] Comment the grid component to align with the style guide
 
 ### Responsive Text System
-Module - [Modularscale Sass](https://github.com/modularscale/modularscale-sass)
+[Modularscale Sass](https://github.com/modularscale/modularscale-sass) was added to the base styles of the project to automatically generate an harmonic scale for typography across the application and device sizes.
+
+#### Configuration
+The base configuration sets the line height to 1.4 units while Mobile and Desktop base text are set to 16px and 18px respectively based upon the response of a tablet sized device.
+```scss
+  $font-line-height: 1.4;
+  $modularscale: (
+    base: 16px,
+    ratio: 1.2,
+    768px: (
+      base: 18px,
+      ratio: 1.2,
+    )
+  );
+```
+
+
   - Uses sass modular scale
   - Mobile first 16px base
   - Desktop 18px base
