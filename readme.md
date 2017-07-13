@@ -17,15 +17,16 @@
 
 
 ## Scripts
-  1. `yarn start` Starts **development** instance
-  2. `yarn preview` Previews the **production** instance
-  3. `yarn build` Builds the **production** instance
-  4. `yarn storybook` Starts the storybook/component library
-  5. `yarn test` Runs all of the tests
-  6. `yarn test:auto` Runs all of the test automatically
-  7. `yarn lint:js` Lints `.js && .jsx`
-  8. `yarn lint:js:fix` Auto fixes `.js && .jsx` errors
-  8. `yarn lint:js:help` Displays help for eslint CLI
+  - `yarn start` Starts **development** build
+  - `yarn preview` Previews the **production** build
+  - `yarn build` Builds the **production** build
+  - `yarn test` Runs all of the tests
+  - `yarn test:auto` Runs all of the test automatically
+  - `yarn styleguide` Launches the styleguide
+  - `yarn styleguidist:build` Builds the styleguide for distribution
+  - `yarn lint:js` Lints `.js && .jsx`
+  - `yarn lint:js:fix` Auto fixes `.js && .jsx` errors
+  - `yarn lint:js:help` Displays help for eslint CLI
 
 
 ## Features
