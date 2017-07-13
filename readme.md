@@ -137,46 +137,51 @@ Internationalization (also known as i18n) is available in this project to be a b
   - To get more detail on implementation, check out this [step-by-step walk through](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
 
 #### Example
-The following example was taken directly from the React-intl readme and will output "Hello **Eric**, you have 1,000 messages."
+The below example uses both the component based solution as well as the API based solution.
 ```javascript
-import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
-import {IntlProvider, FormattedMessage} from 'react-intl';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { FormattedMessage, intlShape, injectIntl, defineMessages } from 'react-intl';
 
-class App extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            name       : 'Eric',
-            unreadCount: 1000,
-        };
-    }
+import IconReact from '../../../assets/icons/icon-react.inline.svg';
 
-    render() {
-        const {name, unreadCount} = this.state;
+import './index.scss';
 
-        return (
-            <p>
-                <FormattedMessage
-                    id="welcome"
-                    defaultMessage={`Hello {name}, you have {unreadCount, number} {unreadCount, plural,
-                      one {message}
-                      other {messages}
-                    }`}
-                    values={{name: <b>{name}</b>, unreadCount}}
-                />
-            </p>
-        );
-    }
+const messages = defineMessages({
+  appSubTitle: {
+    id: 'header.subtitle',
+    defaultMessage: 'React + Redux + Webpack',
+    description: 'application subtitle'
+  }
+});
+
+class Header extends Component {
+  constructor(props) {
+    super(props);
+  }
+
+  render() {
+    return (
+      <header className="header" styleName="header">
+        <IconReact />
+        <h1>
+          <FormattedMessage
+            id="header.title"
+            defaultMessage="JS Boilerplate"
+            description="title message of the application" />
+        </h1>
+        <h4>{ this.props.intl.formatMessage(messages.appSubTitle) }</h4>
+      </header>
+    );
+  }
 }
 
-ReactDOM.render(
-    <IntlProvider locale="en">
-        <App />
-    </IntlProvider>,
-    document.getElementById('container')
-);
+Header.propTypes = {
+  addTodo: PropTypes.func.isRequired,
+  intl: intlShape.isRequired
+};
 
+export default injectIntl(Header);
 ```
 
 **Todo**
