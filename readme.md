@@ -99,34 +99,6 @@ $modularscale: (
 **Todo**
  - [ ] add `ms-respond` into the base text sizes
 
-### Icons
-Icons are added to the application using the Webpack 2 [SVG React Loader](https://github.com/jhamlet/svg-react-loader). The loader creates a component after relatively importing. The component can then be used like a normal react component. For more information, visit the [Icon Component .readme]()
-
-```javascript
-import IconReact from '../../../assets/icons/icon-react.inline.svg';
-
-import './index.scss';
-
-const Header = () => {
-  return (
-    <section styleName="reactIcon">
-      <IconReact />
-    </section>
-  )
-}
-```
-
-**Todo**
- - [ ] Document and Style Guide the Icons
- - [ ] Develop a convention for inlining dynaimcally named SVGs
- - [ ] Create Icon Component to use dynamically named SVGs
-
-### Images
-Module - [URL Loader](https://github.com/webpack-contrib/url-loader)
-  - URL Loader Documentation
-  - Component Documentation
-  - Create Component
-
 ### Internationalization
 Internationalization (also known as i18n) is available in this project to be a basis for interpeting locales, dates, plurals etc... across any region needed. [React-intl](https://github.com/yahoo/react-intl) provides various different methodologies that play well with the "react style" to add i18n into any component.
 
@@ -186,6 +158,36 @@ export default injectIntl(Header);
 
 **Todo**
   - [ ] Figure out [Babel Plugin React Intl](https://github.com/yahoo/babel-plugin-react-intl)
+
+
+
+### Icons
+Icons are added to the application using the Webpack 2 [SVG React Loader](https://github.com/jhamlet/svg-react-loader). The loader creates a component after relatively importing. The component can then be used like a normal react component. For more information, visit the [Icon Component .readme]()
+
+```javascript
+import IconReact from '../../../assets/icons/icon-react.inline.svg';
+
+import './index.scss';
+
+const Header = () => {
+  return (
+    <section styleName="reactIcon">
+      <IconReact />
+    </section>
+  )
+}
+```
+
+**Todo**
+ - [ ] Document and Style Guide the Icons
+ - [ ] Develop a convention for inlining dynaimcally named SVGs
+ - [ ] Create Icon Component to use dynamically named SVGs
+
+### Images
+Module - [URL Loader](https://github.com/webpack-contrib/url-loader)
+  - URL Loader Documentation
+  - Component Documentation
+  - Create Component
 
 
 ### Unit Testing
