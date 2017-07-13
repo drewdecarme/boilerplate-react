@@ -206,7 +206,7 @@ Module - [TBD]()
 Module - [JSCookie]()
  - [ ] Documentation TBD
 
-
+### Authentication
 
 
 ## Credits
