@@ -117,13 +117,9 @@ const Header = () => {
 ```
 
 **Todo**
- - [ ] Document and Styleguide the Icons
+ - [ ] Document and Style Guide the Icons
  - [ ] Develop a convention for inlining dynaimcally named SVGs
-
-Module - 
-  - SVG React Loader Documentation
-  - Sizes & Component Documentation
-  - Create Component
+ - [ ] Create Icon Component to use dynamically named SVGs
 
 ### Images
 Module - [URL Loader](https://github.com/webpack-contrib/url-loader)
@@ -132,13 +128,65 @@ Module - [URL Loader](https://github.com/webpack-contrib/url-loader)
   - Create Component
 
 ### Internationalization
-Module - [React-intl](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
+Internationalization (also known as i18n) is available in this project to be a basis for interpeting locales, dates, plurals etc... across any region needed. [React-intl](https://github.com/yahoo/react-intl) provides various different methodologies that play well with the "react style" to add i18n into any component.
+
+#### Conventions & Quick References
   - Use `<FormattedMessage></FormattedMessage>` when you need the text to have a span in it
   - Use React-Intl API for just plain text
   - `FormattedMessage` id prop should follow the convention `componentName.idLocaltoComponent`;
+  - To get more detail on implementation, check out this [step-by-step walk through](https://www.smashingmagazine.com/2017/01/internationalizing-react-apps/)
+
+#### Example
+The following example was taken directly from the React-intl readme and will output "Hello **Eric**, you have 1,000 messages."
+```javascript
+import React, {Component} from 'react';
+import ReactDOM from 'react-dom';
+import {IntlProvider, FormattedMessage} from 'react-intl';
+
+class App extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            name       : 'Eric',
+            unreadCount: 1000,
+        };
+    }
+
+    render() {
+        const {name, unreadCount} = this.state;
+
+        return (
+            <p>
+                <FormattedMessage
+                    id="welcome"
+                    defaultMessage={`Hello {name}, you have {unreadCount, number} {unreadCount, plural,
+                      one {message}
+                      other {messages}
+                    }`}
+                    values={{name: <b>{name}</b>, unreadCount}}
+                />
+            </p>
+        );
+    }
+}
+
+ReactDOM.render(
+    <IntlProvider locale="en">
+        <App />
+    </IntlProvider>,
+    document.getElementById('container')
+);
+
+```
+
+**Todo**
+  - [ ] Figure out [Babel Plugin React Intl](https://github.com/yahoo/babel-plugin-react-intl)
+
+Module - 
+  
   - Document Component
   - [React Intl](https://github.com/yahoo/react-intl)
-  - [Babel Plugin React Intl](https://github.com/yahoo/babel-plugin-react-intl)
+  - 
 
 ### Unit Testing
 Module - [Mocha & Chai || Jasmine]()
