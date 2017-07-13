@@ -187,11 +187,6 @@ export default injectIntl(Header);
 **Todo**
   - [ ] Figure out [Babel Plugin React Intl](https://github.com/yahoo/babel-plugin-react-intl)
 
-Module - 
-  
-  - Document Component
-  - [React Intl](https://github.com/yahoo/react-intl)
-  - 
 
 ### Unit Testing
 Module - [Mocha & Chai || Jasmine]()
