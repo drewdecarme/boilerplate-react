@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { FormattedMessage, intlShape, injectIntl, defineMessages } from 'react-intl';
 
-import TodoTextInput from '../TodoTextInput/';
 import IconReact from '../../../assets/icons/icon-react.inline.svg';
 
 import './index.scss';
@@ -38,10 +37,6 @@ class Header extends Component {
             description="title message of the application" />
         </h1>
         <h4>{ this.props.intl.formatMessage(messages.appSubTitle) }</h4>
-        <TodoTextInput
-          newTodo
-          onSave={ this.handleSave }
-          placeholder="What needs to be done?" />
       </header>
     );
   }

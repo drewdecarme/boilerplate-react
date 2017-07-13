@@ -1,20 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import TodoItem from '../TodoItem/';
-import Footer from '../Footer/';
 import { Grid, Row, Col } from '../Grid/';
-import { SHOW_ALL, SHOW_COMPLETED, SHOW_ACTIVE } from '../../constants/TodoFilters';
 
-const TODO_FILTERS = {
-  [SHOW_ALL]: () => true,
-  [SHOW_ACTIVE]: todo => !todo.completed,
-  [SHOW_COMPLETED]: todo => todo.completed
-};
+import './index.scss';
 
 class MainSection extends Component {
   constructor(props, context) {
     super(props, context);
-    this.state = { filter: SHOW_ALL };
     this.handleClearCompleted = this.handleClearCompleted.bind(this);
     this.handleShow = this.handleShow.bind(this);
     this.handleCompleteAll = this.handleCompleteAll.bind(this);
@@ -46,60 +38,21 @@ class MainSection extends Component {
     }
   }
 
-  renderFooter(completedCount) {
-    const { todos } = this.props;
-    const { filter } = this.state;
-    const activeCount = todos.length - completedCount;
-
-    if (todos.length) {
-      return (
-        <Footer
-          completedCount={ completedCount }
-          activeCount={ activeCount }
-          filter={ filter }
-          onClearCompleted={ this.handleClearCompleted }
-          onShow={ this.handleShow }
-          />
-      );
-    }
-  }
-
   render() {
-    const { todos, actions } = this.props;
-    const { filter } = this.state;
-
-    const filteredTodos = todos.filter(TODO_FILTERS[filter]);
-    const completedCount = todos.reduce((count, todo) =>
-      todo.completed ? count + 1 : count,
-      0
-    );
-
     return (
-      <Grid>
-        <Row
-          justify={{ orient: 'around', size: 'lg' }}
-          align="end"
-          noGutters>
-          <Col
-            cols={{ default: 12, sm: 12, md: 12, lg: 6, xl: 6 }}
-            offset={{ default: 12, sm: 12, md: 12, lg: 6, xl: 6 }}
-            align="start">
-            <section className="main">
-              { this.renderToggleAll(completedCount) }
-              <ul className="todo-list">
-                { filteredTodos.map(todo =>
-                  (<TodoItem
-                    key={ todo.id }
-                    todo={ todo }
-                    { ...actions }
-                    />)
-                ) }
-              </ul>
-              { this.renderFooter(completedCount) }
-            </section>
-          </Col>
-        </Row>
-      </Grid>
+      <section styleName="content">
+        <Grid>
+          <Row
+            justify={{ orient: 'around', size: 'lg' }}
+            noGutters>
+            <Col
+              cols={{ default: 12, sm: 12, md: 12, lg: 6, xl: 6 }}
+              align="start">
+              <p>Lets get started!</p>
+            </Col>
+          </Row>
+        </Grid>
+      </section>
     );
   }
 }

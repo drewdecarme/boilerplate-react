@@ -24,6 +24,8 @@ body{
 [data-reactroot]{
   height: 100%;
   width: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 p, button, a, input { @include font(0) };
