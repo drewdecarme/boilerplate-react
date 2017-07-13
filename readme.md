@@ -100,7 +100,27 @@ $modularscale: (
  - [ ] add `ms-respond` into the base text sizes
 
 ### Icons
-Module - [SVG React Loader](https://github.com/jhamlet/svg-react-loader)
+Icons are added to the application using the Webpack 2 [SVG React Loader](https://github.com/jhamlet/svg-react-loader). The loader creates a component after relatively importing. The component can then be used like a normal react component. For more information, visit the [Icon Component .readme]()
+
+```javascript
+import IconReact from '../../../assets/icons/icon-react.inline.svg';
+
+import './index.scss';
+
+const Header = () => {
+  return (
+    <section styleName="reactIcon">
+      <IconReact />
+    </section>
+  )
+}
+```
+
+**Todo**
+ - [ ] Document and Styleguide the Icons
+ - [ ] Develop a convention for inlining dynaimcally named SVGs
+
+Module - 
   - SVG React Loader Documentation
   - Sizes & Component Documentation
   - Create Component
