@@ -73,15 +73,13 @@ When adding a new component, it should be symantically named and placed within t
 
 The purpose for repeating the index namespace continually is due to reducing the need to include resolved file extensions defined in both the webpack development and production builds.
 
-### Sass Style Guide
-Module - [TBD]()
-  - [ ] Look into creating style guide
+### Component Library & Style Guide
+The component library utilizes [React Styleguidist](https://react-styleguidist.js.org/) with the projects custom webpack configuration. React Styleguidist is and isolated React component development environment with a living style guide.
 
-### Component Library
-Module - [React Storybook](https://storybook.js.org/)
-  - [x] Implement Storybook
-  - [ ] Align Storybook config to current Webpack development config
-  - [ ] Document Storybook
+Todo
+  - [x] Implement Styleguidist
+  - [ ] Align Styleguidist config to current Webpack development config
+  - [ ] Configure Storybook
 
 ### ES6
 Module - [Cheat Sheet]()
