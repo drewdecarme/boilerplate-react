@@ -82,7 +82,8 @@ Full documentation on the Grid component, how to use it, and what props to pass 
 [Modularscale Sass](https://github.com/modularscale/modularscale-sass) was added to the base styles of the project to automatically generate an harmonic scale for typography across the application and device sizes.
 
 #### Configuration
-The base configuration sets the line height to 1.4 units while Mobile and Desktop base text are set to 16px and 18px respectively based upon the response of a tablet sized device.
+The base configuration sets the line height to 1.4 units. Mobile and Desktop base sizes are set to 16px and 18px respectively against a perfect fourth scale (1.2). The scale is respected across breakpoints while the base size changes based upon the response of a tablet sized device.
+
 ```sass
 $font-line-height: 1.4;
 $modularscale: (
@@ -95,11 +96,8 @@ $modularscale: (
 );
 ```
 
-
-  - Uses sass modular scale
-  - Mobile first 16px base
-  - Desktop 18px base
-  - Uses "perfect-fourth" modular scaling system
+**Todo**
+ - [ ] add `ms-respond` into the base text sizes
 
 ### Icons
 Module - [SVG React Loader](https://github.com/jhamlet/svg-react-loader)
