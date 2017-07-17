@@ -254,10 +254,8 @@ Integration tests should test where the React application meets the outside REST
 ### Redux Middleware
 In attempt to manage redux side effects, [redux-saga](https://github.com/redux-saga/redux-saga) is used to manage any asynchronous calls to fetch data, manage cache, etc...
  
-#### Redux-saga (TBD)
 **Todo**
   - [ ] Document redux-saga
-  - [ ] add saga into the redux-store
   - [ ] add examples
 
 
