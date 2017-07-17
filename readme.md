@@ -265,9 +265,6 @@ Integration tests should test where the React application meets the outside REST
   - [ ] add saga into the redux-store
   - [ ] add examples
 
-### Cookies
-Cookies are managed and accessed using the [react-cookie](https://github.com/reactivestack/cookies) library.
-
 
 
 ## Credits
