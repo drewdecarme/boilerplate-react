@@ -263,7 +263,7 @@ Integration tests should test where the React application meets the outside REST
 [Travis CI](https://travis-ci.org/) is the choice continuous integration tester that is in place
 
 ### Redux Middleware
-In attempt to manage redux side effects, [redux-saga](https://github.com/redux-saga/redux-saga) is used to manage any asynchronous calls to fetch data, manage cache, etc...
+In attempt to manage redux side effects, [redux-saga](https://redux-saga.js.org/docs/introduction/) is used to manage any asynchronous calls to fetch data, manage cache, etc...
 
 **Todo**
   - [ ] Document redux-saga
