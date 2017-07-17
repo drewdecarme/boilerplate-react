@@ -259,13 +259,6 @@ Integration tests should test where the React application meets the outside REST
   - [ ] add saga into the redux-store
   - [ ] add examples
 
-#### Redux-promise-middleware
-**Todo**
-  - [ ] Document redux-saga
-  - [ ] add saga into the redux-store
-  - [ ] add examples
-
-
 
 ## Credits
 #### Javscript
