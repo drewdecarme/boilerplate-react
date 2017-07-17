@@ -197,9 +197,9 @@ In general, unit tests are the most important, followed by integration tests, an
 ### Unit Testing
 #### Testing Tools
 Unit Testing is accomplished using the following tools:
-  - [Karma]() - Test runner configured by Webpack 2
+  - [Karma](https://karma-runner.github.io/1.0/index.html) - Test runner configured by Webpack 2
   - [Jasmine](https://github.com/jasmine/jasmine) - Behavior-driven development JS testing and assertion framework
-  - [PhantomJS]() - Headless Browser
+  - [PhantomJS](http://phantomjs.org/) - Headless Browser
 
 Karma runs the tests that are developed/written using Jasmine in PhantomJS instead of something such as Chrome or Firefox. Tests should follow the same JS conventions laid out in the AirBnb React development style guide.
 
@@ -239,8 +239,8 @@ Each component & Redux container should contain an `index.test.(js|jsx)` file de
 
 **Todo**
   - [ ] Implement a screen capture function
-  - [ ] (Nice to have) Automate Performance Analysis
   - [ ] Add examples for unit tests
+  - [ ] (Nice to have) Automate Performance Analysis
 
 ### Integration Testing
 Integration tests should test where the React application meets the outside REST API or other outside entity. Failing tests should be written first and then successful tests should be written to accommodate the actual results.
@@ -249,21 +249,24 @@ Integration tests should test where the React application meets the outside REST
   - [ ] Add examples for integration tests using chosen middle wear
 
 ### Continuous Integration
-[Travis CI]() is the choice continuous integration tester that is in place
+[Travis CI](https://travis-ci.org/) is the choice continuous integration tester that is in place
 
-### Validation
-Module - [TBD]()
-  - Choose a Redux Validation Framework
-  - Document Validation on Components
+### Redux Middleware
+#### Overview (TBD)
+#### Redux-saga (TBD)
+**Todo**
+  - [ ] Document redux-saga
+  - [ ] add saga into the redux-store
+  - [ ] add examples
 
-### React Middlewear
-Module - [TBD]()
- - Documentation TBD
+#### Redux-promise-middleware
+**Todo**
+  - [ ] Document redux-saga
+  - [ ] add saga into the redux-store
+  - [ ] add examples
 
 ### Cookies
-Module - [JSCookie]()
- - [ ] Documentation TBD
-
+Cookies are managed and accessed using the [react-cookie](https://github.com/reactivestack/cookies) library.
 
 
 
