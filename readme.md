@@ -4,6 +4,17 @@
   1. [Getting Started](#getting-started)
   2. [Scripts](#scripts)
   3. [Features](#features)
+    * [Component Library & Style Guide](#component-library--style-guide)
+    * [Responsive Grid System](#responsive-grid-system)
+    * [Responsive Text System](#responsive-text-system)
+    * [Internationalization (i18n)](#internationalization)
+    * [Icons](#icons)
+    * [Images](#images)
+    * [Testing](#testing)
+    * [Unit Testing](#unit-testing)
+    * [Integration Testing](#integration-testing)
+    * [Continuous Integration](#continuous-integration)
+    * [Redux Middleware](#redux-middleware)
   4. [Credits](#credits)
 
 
@@ -253,7 +264,7 @@ Integration tests should test where the React application meets the outside REST
 
 ### Redux Middleware
 In attempt to manage redux side effects, [redux-saga](https://github.com/redux-saga/redux-saga) is used to manage any asynchronous calls to fetch data, manage cache, etc...
- 
+
 **Todo**
   - [ ] Document redux-saga
   - [ ] add examples
