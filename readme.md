@@ -68,32 +68,32 @@ Below is a detailed view of the folder structure.
 ```
 
 app
-  |-- components/
-  |    |-- component1
-  |          |-- index.jsx
-  |          |-- index.spec.js
-  |          |-- index.style.scss
-  |
-  |-- containers/
-  |    |-- container1
-  |    |     |-- index.jsx
-  |    |     |-- index.spec.js
-  |    |     |-- index.style.scss
-  |    |
-  |    |-- container2
-  |    |-- container3
-  |
-  |-- ducks
-  |    |-- container1.ducks.js
-  |    |-- container2.ducks.js
-  |    |-- container3.ducks.js
-  |
-  |-- sagas
-  |    |-- container1.saga.js
-  |    |-- container2.saga.js
-  |    |-- container3.saga.js
-  |
-  |-- services (TBD)
+ |-- components/
+ |    |-- component1
+ |          |-- index.jsx
+ |          |-- index.spec.js
+ |          |-- index.style.scss
+ |
+ |-- containers/
+ |    |-- container1
+ |    |     |-- index.jsx
+ |    |     |-- index.spec.js
+ |    |     |-- index.style.scss
+ |    |
+ |    |-- container2
+ |    |-- container3
+ |
+ |-- ducks
+ |    |-- container1.ducks.js
+ |    |-- container2.ducks.js
+ |    |-- container3.ducks.js
+ |
+ |-- sagas
+ |    |-- container1.saga.js
+ |    |-- container2.saga.js
+ |    |-- container3.saga.js
+ |
+ |-- services (TBD)
 assets
 styles
 
