@@ -42,21 +42,21 @@
 
 ## Features
 ### Syntax & ES6 (ECMA2015)
-ES6 should be used throughout this project at all times. ESLint is configured to recognize depricated methodologies and will throw an error in the build. All JS techniques are modeled after the [AirBnB React Syntax Style Guide](https://github.com/airbnb/javascript/tree/master/react). ESLint also extends the conventions that AirBnB uses.
+ES6 should be used throughout this project at all times. ESLint is configured to recognize deprecated methodologies and will throw an error in the build. All JS techniques are modeled after the [AirBnB React Syntax Style Guide](https://github.com/airbnb/javascript/tree/master/react). ESLint also extends the conventions that AirBnB uses.
 
-Due to the massive update to the JS spec, you can refer to this [reference sheet]() here for common concepts such as array and object deconstruction, arrow functions, symbols, and class notation.
+Due to the massive update to the JS spec, you can refer to this [ES6 Reference Guide](https://github.com/drewdecarme/es6-reference) here for common concepts such as array and object deconstruction, arrow functions, symbols, and class notation.
 
-#### File Structure & Organization
+### File Structure & Organization
 Project structure follows the [Ducks Methodology](https://github.com/erikras/ducks-modular-redux) and was implemented following an article written by [Matteo Mazzarolo](https://hackernoon.com/my-journey-toward-a-maintainable-project-structure-for-react-redux-b05dfd999b5). There are some nuances of the methodology that improve importation clauses and use of variables which are outlined in the [Writing Ducks]. section below.
 
 Here is the project structure 30,000 feet...
 ```
 app/
- |-- components/
- |-- containers/
- |-- ducks/
- |-- sagas/
- |-- services/
+ |-- components/    (inputs, buttons, links, grid, etc...)
+ |-- containers/    (collection of components that access Redux State)
+ |-- ducks/         (each containers bundled Redux management)
+ |-- sagas/         (TBD)
+ |-- services/      (TBD)
 ```
   1. **Components** - are individual elements that compose great portions of the UI. Components can be but aren't limited to inputs, buttons, grids, etc... pretty much anything that has a standard feel across the entire application. Components can be either presentational (responsive grid system) or stateful (validated inputs)... also known as "dumb and smart" respectively. Each component has an index, style, and test associated with it.
   2. **Containers** - are collection of components that need to interact with the Redux state (a drop down filtering a list of data). Each container has an index, style, and test associated with it.
@@ -98,9 +98,10 @@ styles
 ```
 
 #### Writing Ducks
+TBD
 
 
-#### Style Guide
+### Style Guide
 The component library utilizes [React Styleguidist](https://react-styleguidist.js.org/) with the projects custom webpack configuration. React Styleguidist is and isolated React component development environment with a living style guide.
 
 This solution utilizes a concept of a Living Style Guide generated directly from the code of each of the React Components. Outside of a markdown file and some comments in each of the components, there is no other work required to maintain the style guide; a convention which is missing from most projects. [React Styleguidist]() parses the entire component library, the markdown files associated with each component, the comments inside of each of the components, and compiles each `.scss` file imported into the component to create a comprehensive styleguide that can be viewed, shared, and edited in real time.
