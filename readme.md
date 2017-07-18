@@ -256,14 +256,13 @@ Each component & Redux container should contain an `index.test.(js|jsx)` file de
 ### Integration Testing
 Integration tests should test where the React application meets the outside REST API or other outside entity. Failing tests should be written first and then successful tests should be written to accommodate the actual results.
 
-**Todo**
-  - [ ] Add examples for integration tests using chosen middle wear
-
 ### Continuous Integration
 [Travis CI](https://travis-ci.org/) is the choice continuous integration tester that is in place
 
 ### Redux Middleware
 In attempt to manage redux side effects, [redux-saga](https://redux-saga.js.org/docs/introduction/) is used to manage any asynchronous calls to fetch data, manage cache, etc...
+
+### [Normalzr](https://github.com/paularmstrong/normalizr)
 
 **Todo**
   - [ ] Document redux-saga
