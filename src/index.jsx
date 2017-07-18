@@ -6,8 +6,8 @@ import { Router, Route, browserHistory } from 'react-router';
 import { IntlProvider } from 'react-intl';
 import React from 'react';
 
-import App from './app/containers/App';
-import configureStore from './app/store/configureStore';
+import Home from './app/scenes/Home';
+import configureStore from './index.store';
 
 import './index.scss';
 
@@ -20,7 +20,7 @@ render(
   <IntlProvider locale={ locale }>
     <Provider store={ store }>
       <Router history={ browserHistory }>
-        <Route path="/" component={ App } />
+        <Route path="/" component={ Home } />
       </Router>
     </Provider>
   </IntlProvider>,

@@ -41,25 +41,71 @@
 
 
 ## Features
-### Component Library & Style Guide
-The component library utilizes [React Styleguidist](https://react-styleguidist.js.org/) with the projects custom webpack configuration. React Styleguidist is and isolated React component development environment with a living style guide.
-
-#### ES6 (ECMA2015)
+### Syntax & ES6 (ECMA2015)
 ES6 should be used throughout this project at all times. ESLint is configured to recognize depricated methodologies and will throw an error in the build. All JS techniques are modeled after the [AirBnB React Syntax Style Guide](https://github.com/airbnb/javascript/tree/master/react). ESLint also extends the conventions that AirBnB uses.
 
-Due to the massive update to the JS spec, you can refer to this [cheat sheet]() here for common concepts such as array and object deconstruction, arrow functions, symbols, and class notation.
+Due to the massive update to the JS spec, you can refer to this [reference sheet]() here for common concepts such as array and object deconstruction, arrow functions, symbols, and class notation.
 
-#### Creating a Component
-When adding a new component, it should be semantically named and placed within the `src > app > components` directory. Before it is added to the afore mentioned directory, it should be created within the **stories** directory. Within its new directory, the component should contain 3 files:
+#### File Structure & Organization
+Project structure follows the [Ducks Methodology](https://github.com/erikras/ducks-modular-redux) and was implemented following an article written by [Matteo Mazzarolo](https://hackernoon.com/my-journey-toward-a-maintainable-project-structure-for-react-redux-b05dfd999b5). There are some nuances of the methodology that improve importation clauses and use of variables which are outlined in the [Writing Ducks]. section below.
 
-  1. `index.jsx` will be the main file which contains the React component code
-  2. `index.scss` is the corresponding Sass style sheet for that component
-  3. `index.spec.js` will contain the unit tests for the component
+Here is the project structure 30,000 feet...
+```
+app/
+ |-- components/
+ |-- containers/
+ |-- ducks/
+ |-- sagas/
+ |-- services/
+```
+  1. **Components** - are individual elements that compose great portions of the UI. Components can be but aren't limited to inputs, buttons, grids, etc... pretty much anything that has a standard feel across the entire application. Components can be either presentational (responsive grid system) or stateful (validated inputs)... also known as "dumb and smart" respectively. Each component has an index, style, and test associated with it.
+  2. **Containers** - are collection of components that need to interact with the Redux state (a drop down filtering a list of data). Each container has an index, style, and test associated with it.
+  3. **Ducks** - is a bundle reducers, action types and actions in the same file, leading to a reduced boilerplate. Each duck aligns with the name of the container. The concept behind ducks is to reduce the work needed to maintain Redux code, while still maintaining the integrity of what Redux represents.
+  3. **Sagas** - TBD
+  4. **Services** - TBD
 
-The purpose for repeating the index name-space continually is due to reducing the need to include resolved file extensions defined in both the webpack development and production builds.
+Below is a detailed view of the folder structure.
+```
+
+app
+  |-- components/
+  |    |-- component1
+  |          |-- index.jsx
+  |          |-- index.spec.js
+  |          |-- index.style.scss
+  |
+  |-- containers/
+  |    |-- container1
+  |    |     |-- index.jsx
+  |    |     |-- index.spec.js
+  |    |     |-- index.style.scss
+  |    |
+  |    |-- container2
+  |    |-- container3
+  |
+  |-- ducks
+  |    |-- container1.ducks.js
+  |    |-- container2.ducks.js
+  |    |-- container3.ducks.js
+  |
+  |-- sagas
+  |    |-- container1.saga.js
+  |    |-- container2.saga.js
+  |    |-- container3.saga.js
+  |
+  |-- services (TBD)
+assets
+styles
+
+```
+
+#### Writing Ducks
+
 
 #### Style Guide
-This solution utilizes a concept of a Living Style Guide generated directly from the code of each of the React Components. Outside of a markdown file and some comments in each of the components, there is no other work required to maintain the style guide; a convention which is missing from most projects. React Styleguideist parses the entire component library, the markdown files associated with each component, the comments inside of each of the components, and compiles each `.scss` file imported into the component to create a comprehensive styleguide that can be viewed, shared, and edited in real time.
+The component library utilizes [React Styleguidist](https://react-styleguidist.js.org/) with the projects custom webpack configuration. React Styleguidist is and isolated React component development environment with a living style guide.
+
+This solution utilizes a concept of a Living Style Guide generated directly from the code of each of the React Components. Outside of a markdown file and some comments in each of the components, there is no other work required to maintain the style guide; a convention which is missing from most projects. [React Styleguidist]() parses the entire component library, the markdown files associated with each component, the comments inside of each of the components, and compiles each `.scss` file imported into the component to create a comprehensive styleguide that can be viewed, shared, and edited in real time.
 
   - **To create the styleguide** refer to the [Build Scripts](#build-scripts)
   - **To document a component** refer to the [documentation](https://react-styleguidist.js.org/docs/documenting.html)
@@ -69,7 +115,7 @@ This solution utilizes a concept of a Living Style Guide generated directly from
   - [x] Implement Styleguidist
   - [x] Align Styleguidist config to current Webpack development config
   - [ ] Configure Styleguidist Layout and Components to a working state
-  - [ ] Add ES6 Cheat Sheet Fork Custom ES6 Markdown Cheat Sheet
+  - [x] Add ES6 Cheat Sheet Fork Custom ES6 Markdown Cheat Sheet
   - [ ] Review AirBnb react conventions and adjust ESLint file
 
 ### Responsive Grid System
@@ -262,7 +308,7 @@ Integration tests should test where the React application meets the outside REST
 ### Redux Middleware
 In attempt to manage redux side effects, [redux-saga](https://redux-saga.js.org/docs/introduction/) is used to manage any asynchronous calls to fetch data, manage cache, etc...
 
-### [Normalzr](https://github.com/paularmstrong/normalizr)
+### [Normalzr]()
 
 **Todo**
   - [ ] Document redux-saga

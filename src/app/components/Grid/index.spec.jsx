@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import './index.style.scss';
+import './index.scss';
 
 export const Grid = props => (
   <div styleName="container">{ props.children }</div>

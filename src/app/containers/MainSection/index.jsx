@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Row, Col } from '../Grid/';
+import { Grid, Row, Col } from '../../components/Grid/';
 
-import './index.scss';
+import './index.style.scss';
 
 class MainSection extends Component {
   constructor(props, context) {

@@ -14,7 +14,7 @@
       }
     }],
     ["react-intl", {
-      "messagesDir": "./src/app/messages/"
+      "messagesDir": "./src/messages/"
     }]
   ],
   "env": {

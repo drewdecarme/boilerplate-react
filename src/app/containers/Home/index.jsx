@@ -2,11 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import Header from '../components/Header/';
-import MainSection from '../components/MainSection/';
-import * as TodoActions from '../actions/index';
 
-const App = props => {
+import Header from './Header/';
+import MainSection from './MainSection/';
+
+const TodoActions = {};
+
+const Home = props => {
   const { todos, actions } = props;
 
   return (
@@ -22,9 +24,14 @@ const App = props => {
   );
 };
 
-App.propTypes = {
-  todos: PropTypes.array.isRequired,
+Home.propTypes = {
+  todos: PropTypes.array,
   actions: PropTypes.object.isRequired
+};
+
+Home.defaultProps = {
+  todos: [],
+  actions: {}
 };
 
 const mapStateToProps = state => {
@@ -38,4 +45,4 @@ const mapDispatchToProps = dispatch => {
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(App);
+)(Home);
