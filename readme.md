@@ -117,6 +117,35 @@ This solution utilizes a concept of a Living Style Guide generated directly from
   - [x] Add ES6 Cheat Sheet Fork Custom ES6 Markdown Cheat Sheet
   - [ ] Review AirBnb react conventions and adjust ESLint file
 
+
+### Styling Components
+Sass is the de-facto standard among most projects now and it's used in the project in conjunction with a derivation of React CSS Modules called [Babel Plugin React CSS Modules](https://github.com/gajus/babel-plugin-react-css-modules). This system allows for the import of a .scss file into the component, reconciles the classes with that of the "styleName" prop, and finally hashes the styles to make sure that they are encapsulated within that component.
+
+Essentially, we're taking the "C" out of "CSS". However, there are global styles that are applied at the react root level that are not hashed (fonts, headers, paragraph tags, etc...)
+
+**SCSS File**
+```scss
+.testClass{
+  display: flex;
+  justify-content: center;
+  background: blue;
+}
+```
+**Component**
+```js
+import React, { Component } from 'react';
+import './index.style.scss';
+
+export default const Test = () => {
+  return (
+    <header styleName="testClass">
+      <h1>Hello!</h1>
+    </header>
+  );
+};
+```
+
+
 ### Responsive Grid System
 The [Bootstrap 4 Grid](https://v4-alpha.getbootstrap.com/layout/grid/) is the basis for the grid system in this project. A custom component with props that model the class structure illustrated in the linked documentation was created due to the way that this project binds CSS class imports to components.
 
