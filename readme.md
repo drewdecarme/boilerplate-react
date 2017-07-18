@@ -66,7 +66,6 @@ app/
 
 Below is a detailed view of the folder structure.
 ```
-
 app
  |-- components/
  |    |-- component1
@@ -96,7 +95,6 @@ app
  |-- services (TBD)
 assets
 styles
-
 ```
 
 #### Writing Ducks
