@@ -6,7 +6,7 @@ import { Router, Route, browserHistory } from 'react-router';
 import { IntlProvider } from 'react-intl';
 import React from 'react';
 
-import Home from './app/scenes/Home';
+import Home from './app/containers/Home';
 import configureStore from './index.store';
 
 import './index.scss';

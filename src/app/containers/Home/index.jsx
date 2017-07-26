@@ -3,8 +3,8 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 
-import Header from './Header/';
-import MainSection from './MainSection/';
+import Header from '../Header';
+import MainSection from '../MainSection/';
 
 const TodoActions = {};
 
