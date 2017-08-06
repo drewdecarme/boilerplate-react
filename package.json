@@ -88,5 +88,12 @@
     "lint:js": "node_modules/eslint/bin/eslint.js --ext .js,.jsx src/",
     "lint:js:fix": "node_modules/eslint/bin/eslint.js --fix --ext .js,.jsx src/",
     "lint:js:help": "node_modules/eslint/bin/eslint.js -h"
-  }
+  },
+  "name": "boilerplate-react-redux",
+  "version": "1.0.0",
+  "description": "Enterprise ready React / Redux boilerplate using Webpack, Gulp, Yarn, and various other integrations",
+  "main": "index.js",
+  "repository": "git@github.com:drewdecarme/boilerplate-react-redux.git",
+  "author": "Drew DeCarme",
+  "license": "MIT"
 }
